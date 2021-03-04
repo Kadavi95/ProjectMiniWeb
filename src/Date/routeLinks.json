@@ -1,0 +1,19 @@
+{
+"links": [{
+        "id": 0,
+        "route": "aboutUS"
+    },
+    {
+        "id": 1,
+        "route": "appointment"
+    },
+    {
+        "id": 2,
+        "route": "products"
+    },
+    {
+        "id": 3,
+        "route": "writeus"
+    }
+]
+}
