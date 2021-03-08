@@ -1,0 +1,53 @@
+@import './variables';
+
+.navigationContainerDay, .navigationContainerNight  {
+    width: 100%;
+    height: 10vh;
+    
+    .navigationWidthContainer {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.5rem;
+        .darkModeContainer{
+
+        }
+        .logeContainerDay,.logoContainerNight{
+           .logoLinkDay, .LogoLinkNight{
+               cursor: pointer;
+               text-decoration: none;
+           } 
+        }.hamburgerMenuDay,.hamburgerMenuNight{
+            display: none;
+        }.menuActive,.menuUnactive{
+            .liElementDay, .LiElementNight{
+                .liLinkElement{
+
+                }
+            }
+        }
+
+        
+    }
+}
+.navigationContainerDay {
+    background-image: $primaryColor ;
+}
+.navigationContainerNight {
+    background-image: $secondaryColor;
+}
+.menuDayMode {
+
+}
+.menuNightMode{
+
+}
+
+.logoLinkDay {
+
+}
+.LogoLinkNight {
+    
+}
