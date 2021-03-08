@@ -46,13 +46,13 @@ class Navigation extends Component {
       
     console.log(this.state.nightMode);
     return (
-     
+   
       <>
-        <nav>
-          <div onClick={this.changeNightMode}>
+        <nav className={this.state.nightMode ? "navigationContainerDay" : "navigationContainerNight"}>
+          <div onClick={this.changeNightMode} className="darkModeContainer">
             <DarkMode  className={this.state.nightMode ? "darkModeOn" : 'darkModeOff' }/>
           </div>
-          <div className="logo">
+          <div className={this.state.mobile ? 'logeContainerDay' : 'logoContainerNight'}>
             <Link to="/" exact='true' onClick={this.closeMobileMenu}>Przychodnia Vet
             </Link>
           </div>
@@ -61,7 +61,7 @@ class Navigation extends Component {
               className={this.state.mobile ? "fas fa-times" : "fas fa-bars"}
             ></i>
           </div>
-          <ul>{links}</ul>
+          <ul className={this.state.mobile ? 'menuActive' : 'menuUnactive'} >{links}</ul>
         </nav>
       </>
     );
@@ -69,4 +69,16 @@ class Navigation extends Component {
 }
 
 export default Navigation;
+
+
+
+ 
+
+{/* <i class="fas fa-bars"></i>
+<i class="fas fa-times"></i>
+<i class="fab fa-facebook-f"></i>
+<i class="fab fa-instagram"></i>
+<i class="fab fa-twitter"></i>
+<i class="fas fa-paw"></i> */}
+
 
