@@ -1,118 +1,148 @@
 @import "./variables";
 
-.navigationContainerDay,
-.navigationContainerNight {
+.navigationWidthContainer,
+.navigationWidthContainerNight {
   width: 100vw;
   height: 10vh;
-
-  .navigationWidthContainer {
-    height: 100%;
-    width: 90vw;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.5rem;
-    .darkModeContainer {
-        width: 30vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  .darkModeContainer {
+    width: 30vw;
+    margin-left: 5vw;
+  }
+  .logeContainerDay,
+  .logoContainerNight {
+    line-height: 10vh;
+    height: 10vh;
+    width: 30vw;
+    text-align: center;
+    .logoLinkDay,
+    .LogoLinkNight {
+      display: block;
+      height: 10vh;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 2rem;
     }
-    .logeContainerDay,
-    .logoContainerNight {
-        line-height: 10vh;
+  }
+  .hamburgerMenuDay,
+  .hamburgerMenuNight {
+    display: none;
+    @media screen and (max-width: 1028px) {
+      display: block;
+      width: 30vw;
+      text-align: center;
+    }
+    .fa-times {
+    }
+    .fa-times {
+    }
+  }
+  .menuActive,
+  .menuUnactive {
+    width: 30vw;
+    margin-right: 5vw;
+    display: grid;
+    grid-template-columns: (repeat(4, auto));
+    grid-gap: 10px;
+    text-align: center;
+    @media screen and (max-width: 1030px) {
+      margin-right: 0vw;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      top: 10vh;
+      height: 80vh;
+      width: 100%;
+      text-align: center;
+    }
+
+    .liElementDay,
+    .LiElementNight {
+      display: flex;
+      height: 10vh;
+      line-height: 10vh;
+      width: 100%;
+      @media screen and (max-width: 1030px)  {
+          display: flex;
+          height: 20vh;
+          line-height: 20vh;
+          justify-content: center;
+      }
+
+      .liLinkElement,
+      .liLinkElementNight {
         height: 10vh;
-        width: 30vw;
-        text-align: center;
-      .logoLinkDay,
-      .LogoLinkNight {
-        display: block;
-        height: 10vh;
-        cursor: pointer;
         text-decoration: none;
-        font-size: 2rem;
-      }
-    }
-    .hamburgerMenuDay,
-    .hamburgerMenuNight {
-      display: none;
-      .fa-times {
-
-      }
-      .fa-times {
-
-      }
-    }
-    .menuActive,
-    .menuUnactive {
-        width: 30vw;
-        display: grid;
-        grid-template-columns: (repeat(4, auto));
-        grid-gap: 10px;
-        text-align: center;
-        
-  
-
-      .liElementDay,
-      .LiElementNight {
-       display: flex;
-          height: 10vh;
-          line-height: 10vh;
-        .liLinkElement, .liLinkElementNight {
-    
-        height: 10vh;
-          text-decoration: none;
+        @media screen and (max-width: 1030px)  {
+            height: 20vh;
+            line-height: 20vh;
+            justify-content: center;
         }
       }
     }
   }
 }
-.navigationContainerDay {
+
+.navigationWidthContainer {
   background-image: $primaryColor;
 }
-.navigationContainerNight {
+.navigationWidthContainerNight {
   background-image: $secondaryColor;
 }
 .logeContainerDay {
 }
 .logoContainerNight {
-
 }
 .logoLinkDay {
-    color: $sixthColor;
-    transition: all .2s ease-in;
-    &:hover {
-        color: $thirdColor;
-       border-bottom: 2px solid $thirdColor;
-    }
+  color: $sixthColor;
+  transition: all 0.2s ease-in;
+  &:hover {
+    color: $thirdColor;
+    border-bottom: 2px solid $thirdColor;
+  }
+
 }
 .LogoLinkNight {
-    color: $fifthColor;
-    transition: all .2s ease-in;
-    &:hover {
-        color: $fourthColor;
-       border-bottom: 2px solid $fourthColor;
-    }
+  color: $fifthColor;
+  transition: all 0.2s ease-in;
+  &:hover {
+    color: $fourthColor;
+    border-bottom: 2px solid $fourthColor;
+  }
 }
 .menuDayMode {
-
 }
 .menuNightMode {
 }
-
 .liLinkElement {
-    color: $sixthColor;
-    transition: all .2s ease-in;
-    &:hover {
-        color: $thirdColor;
-       border-bottom: 2px solid $thirdColor;
-    }
-
+  color: $sixthColor;
+  transition: all 0.2s ease-in;
+  &:hover {
+    color: $thirdColor;
+    border-bottom: 2px solid $thirdColor;
+  }
+  @media screen and (max-width: 1020px) {
+      &:hover {
+       color: $sixthColor;
+       border-bottom: none;
+      }
+  }
 }
-
 .liLinkElementNight {
-    color: $fifthColor;
-    transition: all .2s ease-in;
+  color: $fifthColor;
+  transition: all 0.2s ease-in;
+  &:hover {
+    color: $fourthColor;
+    border-bottom: 2px solid $fourthColor;
+  }
+  @media screen and (max-width: 1020px) {
     &:hover {
-        color: $fourthColor;
-       border-bottom: 2px solid $fourthColor;
+     color: $fifthColor;
+     border-bottom: none;
     }
+}
 }

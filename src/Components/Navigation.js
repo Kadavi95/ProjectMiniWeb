@@ -58,14 +58,8 @@ class Navigation extends Component {
     console.log(this.state.nightMode);
     return (
       <>
-        <div
-          className={
-            this.state.nightMode === false
-              ? "navigationContainerDay"
-              : "navigationContainerNight"
-          }
-        >
-          <nav className='navigationWidthContainer'>
+
+          <nav className={this.state.nightMode === false ? 'navigationWidthContainer' : 'navigationWidthContainerNight'}>
             <div onClick={this.changeNightMode} className="darkModeContainer">
               <DarkMode
                 className={this.state.nightMode ? "darkModeOn" : "darkModeOff"}
@@ -108,7 +102,7 @@ class Navigation extends Component {
               {links}
             </ul>
           </nav>
-        </div>
+
       </>
     );
   }
