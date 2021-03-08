@@ -49,6 +49,7 @@
     grid-template-columns: (repeat(4, auto));
     grid-gap: 10px;
     text-align: center;
+    transition: all .5s ease;
     @media screen and (max-width: 1030px) {
       margin-right: 0vw;
       position: absolute;
@@ -58,9 +59,47 @@
       top: 10vh;
       height: 80vh;
       width: 100%;
+      animation: activeMenuAnimation .4s linear;
+      left: 0%;
       text-align: center;
+      @keyframes activeMenuAnimation {
+          0%{
+            left: -100%;
+          }
+          50%{
+            left: -50%;
+          }
+          100%{
+            left: 0%;
+          }
+          
+      }
+    }
+    .liElementDay,
+    .LiElementNight {
+      display: flex;
+      height: 10vh;
+      line-height: 10vh;
+      width: 100%;
+      @media screen and (max-width: 1030px) {
+        display: flex;
+        height: 20vh;
+        line-height: 20vh;
+        justify-content: center;
+      }
+      .liLinkElement,
+      .liLinkElementNight {
+        height: 10vh;
+        text-decoration: none;
+        @media screen and (max-width: 1030px) {
+          height: 20vh;
+          line-height: 20vh;
+          width: 100%;
+        }
+      }
     }
   }
+  
   .menuUnactive {
     width: 30vw;
     margin-right: 5vw;
@@ -68,6 +107,8 @@
     grid-template-columns: (repeat(4, auto));
     grid-gap: 10px;
     text-align: center;
+    transition: all 0.5 ease;
+ 
     @media screen and (max-width: 1030px) {
       margin-right: 0vw;
       position: absolute;
@@ -75,9 +116,24 @@
       flex-direction: column;
       grid-gap: 0px;
       top: 10vh;
+    
       height: 80vh;
       width: 100%;
-      text-align: center;
+      animation: unactiveMenuAnimation .4s 
+      linear;
+      left: -100%;
+     
+      @keyframes unactiveMenuAnimation {
+          0%{
+            left: 0%;
+          }
+          50%{
+            left: -50%;
+          }
+          100%{
+            left: -100%;
+          }
+      }
     }
     .liElementDay,
     .LiElementNight {
@@ -134,10 +190,15 @@
   }
 }
 .menuDayMode {
-  background-image: $invertedPrimaryColor;
+    @media screen and (max-width: 1030px) {
+        background-image: $invertedPrimaryColor;
+    }
 }
 .menuNightMode {
-  background-image: $invertedSecondaryColor;
+    @media screen and (max-width: 1030px) {
+        background-image: $invertedSecondaryColor;
+    }
+
 }
 .liLinkElement {
   color: $sixthColor;
@@ -167,3 +228,4 @@
     }
   }
 }
+
