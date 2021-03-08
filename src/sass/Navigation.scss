@@ -34,14 +34,33 @@
     @media screen and (max-width: 1028px) {
       display: block;
       width: 30vw;
-      text-align: center;
+      text-align: right;
+      margin-right: 5vw;
     }
     .fa-times {
     }
     .fa-times {
     }
   }
-  .menuActive,
+  .menuActive {
+    width: 30vw;
+    margin-right: 5vw;
+    display: grid;
+    grid-template-columns: (repeat(4, auto));
+    grid-gap: 10px;
+    text-align: center;
+    @media screen and (max-width: 1030px) {
+      margin-right: 0vw;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      grid-gap: 0px;
+      top: 10vh;
+      height: 80vh;
+      width: 100%;
+      text-align: center;
+    }
+  }
   .menuUnactive {
     width: 30vw;
     margin-right: 5vw;
@@ -54,33 +73,32 @@
       position: absolute;
       display: flex;
       flex-direction: column;
+      grid-gap: 0px;
       top: 10vh;
       height: 80vh;
       width: 100%;
       text-align: center;
     }
-
     .liElementDay,
     .LiElementNight {
       display: flex;
       height: 10vh;
       line-height: 10vh;
       width: 100%;
-      @media screen and (max-width: 1030px)  {
-          display: flex;
-          height: 20vh;
-          line-height: 20vh;
-          justify-content: center;
+      @media screen and (max-width: 1030px) {
+        display: flex;
+        height: 20vh;
+        line-height: 20vh;
+        justify-content: center;
       }
-
       .liLinkElement,
       .liLinkElementNight {
         height: 10vh;
         text-decoration: none;
-        @media screen and (max-width: 1030px)  {
-            height: 20vh;
-            line-height: 20vh;
-            justify-content: center;
+        @media screen and (max-width: 1030px) {
+          height: 20vh;
+          line-height: 20vh;
+          width: 100%;
         }
       }
     }
@@ -93,10 +111,12 @@
 .navigationWidthContainerNight {
   background-image: $secondaryColor;
 }
+
 .logeContainerDay {
 }
 .logoContainerNight {
 }
+
 .logoLinkDay {
   color: $sixthColor;
   transition: all 0.2s ease-in;
@@ -104,7 +124,6 @@
     color: $thirdColor;
     border-bottom: 2px solid $thirdColor;
   }
-
 }
 .LogoLinkNight {
   color: $fifthColor;
@@ -115,8 +134,10 @@
   }
 }
 .menuDayMode {
+  background-image: $invertedPrimaryColor;
 }
 .menuNightMode {
+  background-image: $invertedSecondaryColor;
 }
 .liLinkElement {
   color: $sixthColor;
@@ -126,10 +147,10 @@
     border-bottom: 2px solid $thirdColor;
   }
   @media screen and (max-width: 1020px) {
-      &:hover {
-       color: $sixthColor;
-       border-bottom: none;
-      }
+    &:hover {
+      color: $thirdColor;
+      border-bottom: none;
+    }
   }
 }
 .liLinkElementNight {
@@ -141,8 +162,8 @@
   }
   @media screen and (max-width: 1020px) {
     &:hover {
-     color: $fifthColor;
-     border-bottom: none;
+      color: $fourthColor;
+      border-bottom: none;
     }
-}
+  }
 }
