@@ -48,7 +48,7 @@ class Navigation extends Component {
         <Link
           to={item.link}
           onClick={this.closeMobileMenu}
-          className={item.itemClassName}
+          className={this.state.nightMode === false ? item.itemClassName : item.itemClassNameNight}
         >
           {item.title}
         </Link>

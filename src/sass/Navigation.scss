@@ -1,53 +1,118 @@
-@import './variables';
+@import "./variables";
 
-.navigationContainerDay, .navigationContainerNight  {
-    width: 100%;
-    height: 10vh;
-    
-    .navigationWidthContainer {
-        width: 90%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 1.5rem;
-        .darkModeContainer{
+.navigationContainerDay,
+.navigationContainerNight {
+  width: 100vw;
+  height: 10vh;
 
-        }
-        .logeContainerDay,.logoContainerNight{
-           .logoLinkDay, .LogoLinkNight{
-               cursor: pointer;
-               text-decoration: none;
-           } 
-        }.hamburgerMenuDay,.hamburgerMenuNight{
-            display: none;
-        }.menuActive,.menuUnactive{
-            .liElementDay, .LiElementNight{
-                .liLinkElement{
-
-                }
-            }
-        }
-
-        
+  .navigationWidthContainer {
+    height: 100%;
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    .darkModeContainer {
+        width: 30vw;
     }
+    .logeContainerDay,
+    .logoContainerNight {
+        line-height: 10vh;
+        height: 10vh;
+        width: 30vw;
+        text-align: center;
+      .logoLinkDay,
+      .LogoLinkNight {
+        display: block;
+        height: 10vh;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 2rem;
+      }
+    }
+    .hamburgerMenuDay,
+    .hamburgerMenuNight {
+      display: none;
+      .fa-times {
+
+      }
+      .fa-times {
+
+      }
+    }
+    .menuActive,
+    .menuUnactive {
+        width: 30vw;
+        display: grid;
+        grid-template-columns: (repeat(4, auto));
+        grid-gap: 10px;
+        text-align: center;
+        
+  
+
+      .liElementDay,
+      .LiElementNight {
+       display: flex;
+          height: 10vh;
+          line-height: 10vh;
+        .liLinkElement, .liLinkElementNight {
+    
+        height: 10vh;
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }
 .navigationContainerDay {
-    background-image: $primaryColor ;
+  background-image: $primaryColor;
 }
 .navigationContainerNight {
-    background-image: $secondaryColor;
+  background-image: $secondaryColor;
+}
+.logeContainerDay {
+}
+.logoContainerNight {
+
+}
+.logoLinkDay {
+    color: $sixthColor;
+    transition: all .2s ease-in;
+    &:hover {
+        color: $thirdColor;
+       border-bottom: 2px solid $thirdColor;
+    }
+}
+.LogoLinkNight {
+    color: $fifthColor;
+    transition: all .2s ease-in;
+    &:hover {
+        color: $fourthColor;
+       border-bottom: 2px solid $fourthColor;
+    }
 }
 .menuDayMode {
 
 }
-.menuNightMode{
+.menuNightMode {
+}
+
+.liLinkElement {
+    color: $sixthColor;
+    transition: all .2s ease-in;
+    &:hover {
+        color: $thirdColor;
+       border-bottom: 2px solid $thirdColor;
+    }
 
 }
 
-.logoLinkDay {
-
-}
-.LogoLinkNight {
-    
+.liLinkElementNight {
+    color: $fifthColor;
+    transition: all .2s ease-in;
+    &:hover {
+        color: $fourthColor;
+       border-bottom: 2px solid $fourthColor;
+    }
 }
