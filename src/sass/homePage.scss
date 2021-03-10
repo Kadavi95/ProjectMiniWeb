@@ -1,0 +1,14 @@
+@import './variables';
+
+.homePageContainer{
+    height: 80vh;
+    top: 10vh;
+    background-color: red;
+    .singlePhoto{
+        width: 100%;
+        max-height: 80vh;
+    }
+    .buttonLink{
+
+    }
+}
