@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { Navlink, Link } from "react-router-dom";
 import DarkMode from "./DarkMode";
+
 import "../sass/Navigation.scss";
+// import Info from './Info';
 class Navigation extends Component {
   state = {
     mobile: false,
@@ -21,6 +23,9 @@ class Navigation extends Component {
         });
       });
   };
+  turnOffMobileMenu = () => {
+    
+  }
 
   closeMobileMenu = () => {
     const mobile = this.state.mobile;
@@ -64,6 +69,10 @@ class Navigation extends Component {
               <DarkMode
                 className={this.state.nightMode ? "darkModeOn" : "darkModeOff"}
               />
+              {/* <Info
+                className={this.state.nightMode === false? "dzien" : "noc"}
+              /> */}
+            
             </div>
             <div
               className={
@@ -72,7 +81,7 @@ class Navigation extends Component {
                   : "logoContainerNight"
               }
             >
-              <Link to="/" exact="true" onClick={this.closeMobileMenu}  className={
+              <Link to="/" exact="true"  onClick={this.turnOffMobileMenu} className={
                 this.state.nightMode === false
                   ? "logoLinkDay"
                   : "LogoLinkNight"
@@ -101,7 +110,9 @@ class Navigation extends Component {
             >
               {links}
             </ul>
+            
           </nav>
+         
 
       </>
     );
