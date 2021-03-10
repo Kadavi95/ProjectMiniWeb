@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Navlink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import DarkMode from "./DarkMode";
 
 import "../sass/Navigation.scss";
@@ -24,7 +24,7 @@ class Navigation extends Component {
       });
   };
   turnOffMobileMenu = () => {
-    
+
   }
 
   closeMobileMenu = () => {
