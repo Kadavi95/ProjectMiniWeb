@@ -7,8 +7,18 @@ class contactUs extends Component {
       surName: '',
       telephoneNumber: '',
       day: '',
-      hour: '8:00',
+      hour: ' ',
       rodoClausule: false,
+      messages: {
+        wrongName: 'Twoje imię musi zawierać conajmniej dwa imiona i nie zawierać cyfr ani znaków specjalnych',
+        wrongSurname: 'Twoje nazwisko musi zawierać conajmniej dwa imiona i nie zawierać cyfr ani znaków specjalnych',
+        wrongTelephoneNumber: 'Twój numer telefon musi składać sie conajmniej z 5 cyfr',
+        wrongDay: 'Musisz zaznaczyć to pole',
+        wrongOur: 'Musisz wybrać godzinę z zakresu od 8 do 16',
+        wrongRodoClausule: 'Musisz zaznaczyć to pole. aby wysłać formularz',
+        
+
+      }
   };
 
   changeName = (e) => {
@@ -60,6 +70,7 @@ class contactUs extends Component {
                 <input type="number" value={this.state.telephoneNumber} onChange={this.changeTelephoneNumber}/>
             </label>
             <select value={this.state.hour} onChange= {this.changeHour}>
+              <option value=" "> </option>
               <option value="8:00">8:00</option>
               <option value="9:00">9:00</option>
               <option value="10:00">10:00</option>
