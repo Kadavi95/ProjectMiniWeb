@@ -8,7 +8,7 @@ class contactUs extends Component {
       telephoneNumber: '',
       day: '',
       hour: '8:00',
-      rodoCalusue: ''
+      rodoClausule: false,
   };
 
   changeName = (e) => {
@@ -36,6 +36,9 @@ class contactUs extends Component {
     this.setState({
       hour: hour
     })
+  }
+  acceptRODO = (e) => {
+    
   }
 
 
@@ -67,6 +70,9 @@ class contactUs extends Component {
               <option value="15:00">15:00</option>
               <option value="16:00">16:00</option>
             </select>
+            <label htmlFor="">
+              <input type="checkbox"checked={this.state.rodoClausule} value={this.state.rodoClausule} onChange={this.acceptRODO}/>
+            </label>
           
 
         </form>
