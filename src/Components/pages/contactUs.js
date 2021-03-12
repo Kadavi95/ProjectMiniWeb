@@ -21,8 +21,12 @@ class contactUs extends Component {
                 <input type="text"/>
             </label>
             <label htmlFor="">
-                <input type="text"/>
+                <input type="number"/>
             </label>
+            <label htmlFor="">
+              <input type='month' name="" id=""/>
+            </label>
+          
 
         </form>
       </>
