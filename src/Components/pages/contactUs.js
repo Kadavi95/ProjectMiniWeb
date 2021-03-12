@@ -7,33 +7,65 @@ class contactUs extends Component {
       surName: '',
       telephoneNumber: '',
       day: '',
-      hour: '',
+      hour: '8:00',
       rodoCalusue: ''
   };
+
+  changeName = (e) => {
+    const name = e.target.value;
+    this.setState({
+      name: name
+    })
+  }
+
+  changeSurname = (e) => {
+    const surName = e.target.value;
+    this.setState({
+      surName: surName
+    })
+  }
+  
+  changeTelephoneNumber = e => {
+    const telephoneNumber = e.target.value;
+    this.setState({
+      telephoneNumber: telephoneNumber
+    })
+  }
+  changeHour = (e) => {
+    const hour = e.target.value;
+    this.setState({
+      hour: hour
+    })
+  }
+
+
   render() {
+    console.log(this.state.hour);
+    console.log(this.state.telephoneNumber);
+    console.log(this.state.surName);
+    console.log(this.state.name);
     return (
       <>
         <form action="">
             <label htmlFor="">
-                <input type="text" value={this.state.name}/>
+                <input type="text" value={this.state.name} onChange={this.changeName}/>
             </label>
             <label htmlFor="">
-                <input type="text" value={this.state.name}/>
+                <input type="text" value={this.state.surName} onChange={this.changeSurname}/>
             </label>
             <label htmlFor="">
-                <input type="number" value={this.state.telephoneNumber}/>
+                <input type="number" value={this.state.telephoneNumber} onChange={this.changeTelephoneNumber}/>
             </label>
-            <select name="" id="">
-              <option value="">8:00</option>
-              <option value="">9:00</option>
-              <option value="">10:00</option>
-              <option value="">11:00</option>
-              <option value="">12:00</option>
-              <option value="">13:00</option>
-              <option value="">14:00</option>
-              <option value="">15:00</option>
-              <option value="">15:00</option>
-              <option value="">16:00</option>
+            <select value={this.state.hour} onChange= {this.changeHour}>
+              <option value="8:00">8:00</option>
+              <option value="9:00">9:00</option>
+              <option value="10:00">10:00</option>
+              <option value="11:00">11:00</option>
+              <option value="12:00">12:00</option>
+              <option value="13:00">13:00</option>
+              <option value="14:00">14:00</option>
+              <option value="15:00">15:00</option>
+              <option value="16:00">16:00</option>
             </select>
           
 
