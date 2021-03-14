@@ -3,23 +3,23 @@ import React, { Component } from "react";
 
 class contactUs extends Component {
   state = {
-      name: '',
-      surName: '',
-      telephoneNumber: '',
-      day: '',
-      hour: ' ',
-      rodoClausule: false,
-      messages: {
-        wrongName: 'Twoje imię musi zawierać conajmniej dwa imiona i nie zawierać cyfr ani znaków specjalnych',
-        wrongSurname: 'Twoje nazwisko musi zawierać conajmniej dwa imiona i nie zawierać cyfr ani znaków specjalnych',
-        wrongTelephoneNumber: 'Twój numer telefon musi składać sie conajmniej z 5 cyfr',
-        wrongDay: 'Musisz zaznaczyć to pole',
-        wrongOur: 'Musisz wybrać godzinę z zakresu od 8 do 16',
-        wrongRodoClausule: 'Musisz zaznaczyć to pole. aby wysłać formularz',
+      // name: '',
+      // surName: '',
+      // telephoneNumber: '',
+      // day: '',
+      // hour: ' ',
+      // rodoClausule: false,
+      // messages: {
+      //   wrongName: 'Twoje imię musi zawierać conajmniej dwa imiona i nie zawierać cyfr ani znaków specjalnych',
+      //   wrongSurname: 'Twoje nazwisko musi zawierać conajmniej dwa imiona i nie zawierać cyfr ani znaków specjalnych',
+      //   wrongTelephoneNumber: 'Twój numer telefon musi składać sie conajmniej z 5 cyfr',
+      //   wrongDay: 'Musisz zaznaczyć to pole',
+      //   wrongOur: 'Musisz wybrać godzinę z zakresu od 8 do 16',
+      //   wrongRodoClausule: 'Musisz zaznaczyć to pole. aby wysłać formularz',
         
 
       }
-  };
+  // };
 
   changeName = (e) => {
     const name = e.target.value;
@@ -59,7 +59,7 @@ class contactUs extends Component {
     console.log(this.state.name);
     return (
       <>
-        <form action="">
+        {/* <form action="">
             <label htmlFor="">
                 <input type="text" value={this.state.name} onChange={this.changeName}/>
             </label>
@@ -86,7 +86,7 @@ class contactUs extends Component {
             </label>
           
 
-        </form>
+        </form> */}
       </>
     );
   }
