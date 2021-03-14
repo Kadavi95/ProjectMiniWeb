@@ -44,7 +44,7 @@ class homePage extends Component {
           />
         </div>
       <div className='contactUsContainer'>
-        <button className='contactButtonLink'><Link className="buttonLink" to="contactUs">Umów wizytę</Link></button>
+        <button className='contactButtonLink'><Link className="buttonLink" to="appointment">Umów wizytę</Link></button>
       </div>
       </>
     );

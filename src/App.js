@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Navigation from './Components/Navigation';
 import homePage from './Components/pages/homePage';
 import contactus from './Components/pages/contactUs';
+import Appointment from './Components/pages/appointment';
 
 const App = () => {
   return ( <> 
@@ -13,6 +14,7 @@ const App = () => {
     <Switch>
       <Route path='/' exact = {true} component={homePage} ></Route>
       <Route path='/contactUs' exact = {true} component={contactus} ></Route>
+      <Route path='/appointment' exact = {true} component={Appointment} />
     </Switch>
   </Router>
   </> );
