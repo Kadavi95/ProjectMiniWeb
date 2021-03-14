@@ -11,15 +11,56 @@ class Appointment extends Component {
     rodoClausule: false,
     messages: {
       wrongName:
-        "Twoje imię musi zawierać conajmniej dwa imiona i nie zawierać cyfr ani znaków specjalnych",
+        "Twoje imię musi zawierać conajmniej dwa znaki i nie zawierać cyfr",
       wrongSurname:
-        "Twoje nazwisko musi zawierać conajmniej dwa imiona i nie zawierać cyfr ani znaków specjalnych",
+        "Twoje nazwisko musi zawierać conajmniej dwa znaki i nie zawierać cyfr ",
       wrongTelephoneNumber:
         "Twój numer telefon musi składać sie conajmniej z 5 cyfr",
       wrongDay: "Musisz zaznaczyć to pole",
       wrongOur: "Musisz wybrać godzinę z zakresu od 8 do 16",
       wrongRodoClausule: "Musisz zaznaczyć to pole. aby wysłać formularz",
     },
+  };
+  submitForm = (e) => {
+    e.preventDefault();
+    if (
+      this.state.name !== false &&
+      (this.state.name.length < 2 ||
+        this.state.name.indexOf(0) > -1 ||
+        this.state.name.indexOf(1) > -1 ||
+        this.state.name.indexOf(2) > -1 ||
+        this.state.name.indexOf(3) > -1 ||
+        this.state.name.indexOf(4) > -1 ||
+        this.state.name.indexOf(5) > -1 ||
+        this.state.name.indexOf(6) > -1 ||
+        this.state.name.indexOf(7) > -1 ||
+        this.state.name.indexOf(8) > -1 ||
+        this.state.name.indexOf(9) > -1)
+    ) {
+      this.setState({
+        name: false,
+      });
+    }
+    if (
+        this.state.surName !== false &&
+        (this.state.surName.length < 2 ||
+          this.state.surName.indexOf(0) > -1 ||
+          this.state.surName.indexOf(1) > -1 ||
+          this.state.surName.indexOf(2) > -1 ||
+          this.state.surName.indexOf(3) > -1 ||
+          this.state.surName.indexOf(4) > -1 ||
+          this.state.surName.indexOf(5) > -1 ||
+          this.state.surName.indexOf(6) > -1 ||
+          this.state.surName.indexOf(7) > -1 ||
+          this.state.surName.indexOf(8) > -1 ||
+          this.state.surName.indexOf(9) > -1)
+      ) {
+        this.setState({
+            surName: false,
+        });
+      }
+      
+
   };
 
   changeName = (e) => {
@@ -54,18 +95,24 @@ class Appointment extends Component {
       hour: hour,
     });
   };
-  acceptRODO = (e) => {};
+  acceptRODO = (e) => {
+    this.setState({
+      rodoClausule: !this.state.rodoClausule,
+    });
+  };
 
   render() {
+    console.log(this.state.name);
     console.log(this.state.hour);
     console.log(this.state.telephoneNumber);
     console.log(this.state.surName);
     console.log(this.state.day);
+    console.log(this.state.rodoClausule);
     let maxDate = this.minDate.slice(0, 4) * 1;
     maxDate = maxDate + "-12-31";
     return (
       <>
-        <form action="">
+        <form onSubmit={this.submitForm}>
           <label htmlFor="">
             <input
               type="text"
@@ -73,6 +120,9 @@ class Appointment extends Component {
               onChange={this.changeName}
             />
           </label>
+          <p>
+            {this.state.name === false ? this.state.messages.wrongName : ""}
+          </p>
           <label htmlFor="">
             <input
               type="text"
@@ -80,6 +130,9 @@ class Appointment extends Component {
               onChange={this.changeSurname}
             />
           </label>
+          <p>
+              {this.state.surName === false ? this.state.messages.wrongSurname : ''}
+          </p>
           <label htmlFor="">
             <input
               type="number"
@@ -116,6 +169,7 @@ class Appointment extends Component {
               onChange={this.acceptRODO}
             />
           </label>
+          <button>Umów!</button>
         </form>
       </>
     );
