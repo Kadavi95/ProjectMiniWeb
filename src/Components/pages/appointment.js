@@ -68,6 +68,13 @@ class Appointment extends Component {
         telephoneNumber: false,
       });
     }
+    if (
+        this.state.hour !== false && this.state.hour.length < 2
+    ) {
+        this.setState({
+            hour: false
+        })
+    }
   };
 
   changeName = (e) => {
@@ -149,6 +156,11 @@ class Appointment extends Component {
               onChange={this.changeTelephoneNumber}
             />
           </label>
+          <p>
+            {this.state.telephoneNumber === false
+              ? this.state.messages.wrongTelephoneNumber
+              : ""}
+          </p>
           <select value={this.state.hour} onChange={this.changeHour}>
             <option value=" "> </option>
             <option value="8:00">8:00</option>
@@ -161,6 +173,7 @@ class Appointment extends Component {
             <option value="15:00">15:00</option>
             <option value="16:00">16:00</option>
           </select>
+            <p>{this.state.hour === false ? this.state.messages.wrongOur : ''}</p>
           <label htmlFor="">
             <input
               type="date"
