@@ -8,6 +8,7 @@ class Appointment extends Component {
     telephoneNumber: "",
     day: this.minDate,
     hour: " ",
+    messageValue: "",
     rodoClausule: false,
     messages: {
       wrongName:
@@ -68,25 +69,29 @@ class Appointment extends Component {
         telephoneNumber: false,
       });
     }
-    if (
-        this.state.hour !== false && this.state.hour.length < 2
+    if (this.state.hour !== false && this.state.hour.length < 2) {
+      this.setState({
+        hour: false,
+      });
+    } else if (
+      this.state.name !== false &&
+      this.state.surName !== false &&
+      this.state.telephoneNumber !== false &&
+      this.state.hour !== false &&
+      this.state.rodoClausule === true
     ) {
-        this.setState({
-            hour: false
-        })
-    } else if (this.state.name !== false && this.state.surName !== false && this.state.telephoneNumber !== false && this.state.hour !== false && this.state.rodoClausule === true) {
-        alert('Formularz został wysłany')
-        const primaryClearValue = "";
-        const secondaryClearValue = " "
-        this.setState({
-            name: primaryClearValue,
-            surName: primaryClearValue,
-            telephoneNumber: primaryClearValue,
-            day: this.minDate,
-            hour: secondaryClearValue,
-            rodoClausule: false,
-
-        })
+      alert("Formularz został wysłany");
+      const primaryClearValue = "";
+      const secondaryClearValue = " ";
+      this.setState({
+        name: primaryClearValue,
+        surName: primaryClearValue,
+        telephoneNumber: primaryClearValue,
+        day: this.minDate,
+        hour: secondaryClearValue,
+        messageValue: primaryClearValue,
+        rodoClausule: false,
+      });
     }
   };
 
@@ -122,6 +127,12 @@ class Appointment extends Component {
       hour: hour,
     });
   };
+  writeMessage = (e) => {
+    const text = e.target.value;
+    this.setState({
+      messageValue: text,
+    });
+  };
   acceptRODO = (e) => {
     this.setState({
       rodoClausule: !this.state.rodoClausule,
@@ -134,6 +145,7 @@ class Appointment extends Component {
     console.log(this.state.telephoneNumber);
     console.log(this.state.surName);
     console.log(this.state.day);
+    console.log(this.state.messageValue);
     console.log(this.state.rodoClausule);
     let maxDate = this.minDate.slice(0, 4) * 1;
     maxDate = maxDate + "-12-31";
@@ -186,7 +198,7 @@ class Appointment extends Component {
             <option value="15:00">15:00</option>
             <option value="16:00">16:00</option>
           </select>
-            <p>{this.state.hour === false ? this.state.messages.wrongOur : ''}</p>
+          <p>{this.state.hour === false ? this.state.messages.wrongOur : ""}</p>
           <label htmlFor="">
             <input
               type="date"
@@ -196,15 +208,25 @@ class Appointment extends Component {
               onChange={this.changeDay}
             />
           </label>
-          <label htmlFor="">
+          <textarea
+            id="writeMessage"
+            onChange={this.writeMessage}
+            value={this.state.messageValue}
+          ></textarea>
+          <label htmlFor="rodoClausuleInput">
             <input
+              id="rodoClausuleInput"
               type="checkbox"
               checked={this.state.rodoClausule}
               value={this.state.rodoClausule}
               onChange={this.acceptRODO}
             />
           </label>
-          <p>{this.state.rodoClausule === false ? this.state.messages.wrongRodoClausule : ''}</p>
+          <p>
+            {this.state.rodoClausule === false
+              ? this.state.messages.wrongRodoClausule
+              : ""}
+          </p>
           <button>Umów!</button>
         </form>
       </>
