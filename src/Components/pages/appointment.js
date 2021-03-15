@@ -74,6 +74,19 @@ class Appointment extends Component {
         this.setState({
             hour: false
         })
+    } else if (this.state.name !== false && this.state.surName !== false && this.state.telephoneNumber !== false && this.state.hour !== false && this.state.rodoClausule === true) {
+        alert('Formularz został wysłany')
+        const primaryClearValue = "";
+        const secondaryClearValue = " "
+        this.setState({
+            name: primaryClearValue,
+            surName: primaryClearValue,
+            telephoneNumber: primaryClearValue,
+            day: this.minDate,
+            hour: secondaryClearValue,
+            rodoClausule: false,
+
+        })
     }
   };
 
@@ -191,6 +204,7 @@ class Appointment extends Component {
               onChange={this.acceptRODO}
             />
           </label>
+          <p>{this.state.rodoClausule === false ? this.state.messages.wrongRodoClausule : ''}</p>
           <button>Umów!</button>
         </form>
       </>
