@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../../sass/appointment.scss";
 
 class Appointment extends Component {
   minDate = new Date().toISOString().slice(0, 10);
@@ -151,9 +152,10 @@ class Appointment extends Component {
     maxDate = maxDate + "-12-31";
     return (
       <>
-        <form onSubmit={this.submitForm}>
-          <label htmlFor="">
+        <form id="contactUsForm" onSubmit={this.submitForm}>
+          <label id="contactUsNameLabel" htmlFor="name">
             <input
+              id="name"
               type="text"
               value={this.state.name}
               onChange={this.changeName}
@@ -162,8 +164,9 @@ class Appointment extends Component {
           <p>
             {this.state.name === false ? this.state.messages.wrongName : ""}
           </p>
-          <label htmlFor="">
+          <label id="contactUsSurnameLabel" htmlFor="surName">
             <input
+              id="surName"
               type="text"
               value={this.state.surName}
               onChange={this.changeSurname}
@@ -174,8 +177,9 @@ class Appointment extends Component {
               ? this.state.messages.wrongSurname
               : ""}
           </p>
-          <label htmlFor="">
+          <label id="contactUsTelephoneLabel" htmlFor="number">
             <input
+              id="number"
               type="number"
               value={this.state.telephoneNumber}
               onChange={this.changeTelephoneNumber}
@@ -186,7 +190,11 @@ class Appointment extends Component {
               ? this.state.messages.wrongTelephoneNumber
               : ""}
           </p>
-          <select value={this.state.hour} onChange={this.changeHour}>
+          <select
+            id="contactUsSelect"
+            value={this.state.hour}
+            onChange={this.changeHour}
+          >
             <option value=" "> </option>
             <option value="8:00">8:00</option>
             <option value="9:00">9:00</option>
@@ -199,8 +207,9 @@ class Appointment extends Component {
             <option value="16:00">16:00</option>
           </select>
           <p>{this.state.hour === false ? this.state.messages.wrongOur : ""}</p>
-          <label htmlFor="">
+          <label id="contactUsDateLabel" htmlFor="date">
             <input
+              id="data"
               type="date"
               value={this.state.day}
               min={this.minDate}
@@ -213,7 +222,7 @@ class Appointment extends Component {
             onChange={this.writeMessage}
             value={this.state.messageValue}
           ></textarea>
-          <label htmlFor="rodoClausuleInput">
+          <label id='contactUsRodoLabel' htmlFor="rodoClausuleInput">
             <input
               id="rodoClausuleInput"
               type="checkbox"
