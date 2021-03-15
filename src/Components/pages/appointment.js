@@ -160,10 +160,13 @@ class Appointment extends Component {
               value={this.state.name}
               onChange={this.changeName}
             />
+            <div id="nameWarningDiv">
+              <p>
+                {this.state.name === false ? this.state.messages.wrongName : ""}
+              </p>
+            </div>
           </label>
-          <p>
-            {this.state.name === false ? this.state.messages.wrongName : ""}
-          </p>
+
           <label id="contactUsSurnameLabel" htmlFor="surName">
             <input
               id="surName"
@@ -171,12 +174,15 @@ class Appointment extends Component {
               value={this.state.surName}
               onChange={this.changeSurname}
             />
+            <div id="surnameWarningDiv">
+              <p>
+                {this.state.surName === false
+                  ? this.state.messages.wrongSurname
+                  : ""}
+              </p>
+            </div>
           </label>
-          <p>
-            {this.state.surName === false
-              ? this.state.messages.wrongSurname
-              : ""}
-          </p>
+
           <label id="contactUsTelephoneLabel" htmlFor="number">
             <input
               id="number"
@@ -222,7 +228,7 @@ class Appointment extends Component {
             onChange={this.writeMessage}
             value={this.state.messageValue}
           ></textarea>
-          <label id='contactUsRodoLabel' htmlFor="rodoClausuleInput">
+          <label id="contactUsRodoLabel" htmlFor="rodoClausuleInput">
             <input
               id="rodoClausuleInput"
               type="checkbox"
