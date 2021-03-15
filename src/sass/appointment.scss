@@ -1,61 +1,157 @@
-@import './variables';
+@import "./variables";
 
 #contactUsForm {
- height: 80vh;
- width: 100%;
- background-color: grey;
- display: flex;
- flex-direction: column;
- #contactUsNameLabel{
-     height: 10vh;
-     width: 100%;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: space-around;
-     #name{
-         font-size: .8rem;
-         border: none;
-         border-radius: 10px;
-         padding-top: 1vh;
-         padding-bottom: 1vh;
-         width: 50%;
-         outline: none;
-     }
-     #nameWarningDiv{
-         font-size: .8rem;
-         width: 50%;
-         height: 3vh;
-         text-align: center;
-         p{
-            color: $warningColor;
-         }
-     }
- }
- #contactUsSurnameLabel{
-     height: 10vh;
-     width: 100%;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: space-around;
-     #surName{
-         font-size: .8rem;
-         border: none;
-         border-radius: 10px;
-         padding-top: 1vh;
-         padding-bottom: 1vh;
-         width: 50%;
-         outline: none;
-     }
-     #surnameWarningDiv{
-         font-size: .8rem;
-         width: 50%;
-         height: 3vh;
-         text-align: center;
-         p{
-            color: $warningColor;
-         }
-     }
- }
+  height: 80vh;
+  width: 100%;
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  #contactUsNameLabel {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    #name {
+      font-size: 0.8rem;
+      border: none;
+      border-radius: 10px;
+      padding-top: 1vh;
+      padding-bottom: 1vh;
+      width: 50%;
+      outline: none;
+      text-align-last: center;
+    }
+    #nameWarningDiv {
+      font-size: 0.8rem;
+      width: 50%;
+      height: 3vh;
+      text-align: center;
+      p {
+        color: $warningColor;
+      }
+    }
+  }
+  #contactUsSurnameLabel {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    #surName {
+      font-size: 0.8rem;
+      border: none;
+      border-radius: 10px;
+      padding-top: 1vh;
+      padding-bottom: 1vh;
+      width: 50%;
+      outline: none;
+      text-align-last: center;
+    }
+    #surnameWarningDiv {
+      font-size: 0.8rem;
+      width: 50%;
+      height: 3vh;
+      text-align: center;
+      p {
+        color: $warningColor;
+      }
+    }
+  }
+  #contactUsTelephoneLabel {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    #number {
+      font-size: 0.8rem;
+      border: none;
+      border-radius: 10px;
+      padding-top: 1vh;
+      padding-bottom: 1vh;
+      width: 50%;
+      outline: none;
+      text-align-last: center;
+    }
+    #numberWarningDiv {
+      font-size: 0.8rem;
+      width: 50%;
+      height: 3vh;
+      text-align: center;
+      p {
+        color: $warningColor;
+      }
+    }
+  }
+  #selectDayContainer {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    #contactUsSelect {
+      font-size: 0.8rem;
+      border: none;
+      border-radius: 10px;
+      padding-top: 1vh;
+      padding-bottom: 1vh;
+      width: 50%;
+      outline: none;
+      text-align-last: center;
+    }
+    #contactUsSelectWarning {
+      font-size: 0.8rem;
+      width: 50%;
+      height: 3vh;
+      text-align: center;
+      p {
+        color: $warningColor;
+      }
+    }
+  }
+  #contactUsDateLabel {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    #data {
+      font-size: 0.8rem;
+      border: none;
+      border-radius: 10px;
+      padding-top: 1vh;
+      padding-bottom: 1vh;
+      width: 50%;
+      outline: none;
+      text-align-last: center;
+    }
+  }
+  #writeMessageContainer{
+      height: 10vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+
+    #writeMessage{
+        font-size: 0.8rem;
+        border: none;
+        border-radius: 10px;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        width: 50%;
+        outline: none;
+        overflow: scroll;
+    }
+    
+  }
 }

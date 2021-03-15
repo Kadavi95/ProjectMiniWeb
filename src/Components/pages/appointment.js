@@ -190,29 +190,38 @@ class Appointment extends Component {
               value={this.state.telephoneNumber}
               onChange={this.changeTelephoneNumber}
             />
+            <div id="numberWarningDiv">
+              <p>
+                {this.state.telephoneNumber === false
+                  ? this.state.messages.wrongTelephoneNumber
+                  : ""}
+              </p>
+            </div>
           </label>
-          <p>
-            {this.state.telephoneNumber === false
-              ? this.state.messages.wrongTelephoneNumber
-              : ""}
-          </p>
-          <select
-            id="contactUsSelect"
-            value={this.state.hour}
-            onChange={this.changeHour}
-          >
-            <option value=" "> </option>
-            <option value="8:00">8:00</option>
-            <option value="9:00">9:00</option>
-            <option value="10:00">10:00</option>
-            <option value="11:00">11:00</option>
-            <option value="12:00">12:00</option>
-            <option value="13:00">13:00</option>
-            <option value="14:00">14:00</option>
-            <option value="15:00">15:00</option>
-            <option value="16:00">16:00</option>
-          </select>
-          <p>{this.state.hour === false ? this.state.messages.wrongOur : ""}</p>
+
+          <div id="selectDayContainer">
+            <select
+              id="contactUsSelect"
+              value={this.state.hour}
+              onChange={this.changeHour}
+            >
+              <option value=" "> </option>
+              <option value="8:00">8:00</option>
+              <option value="9:00">9:00</option>
+              <option value="10:00">10:00</option>
+              <option value="11:00">11:00</option>
+              <option value="12:00">12:00</option>
+              <option value="13:00">13:00</option>
+              <option value="14:00">14:00</option>
+              <option value="15:00">15:00</option>
+              <option value="16:00">16:00</option>
+            </select>
+            <div id="contactUsSelectWarning">
+              <p>
+                {this.state.hour === false ? this.state.messages.wrongOur : ""}
+              </p>
+            </div>
+          </div>
           <label id="contactUsDateLabel" htmlFor="date">
             <input
               id="data"
@@ -223,11 +232,13 @@ class Appointment extends Component {
               onChange={this.changeDay}
             />
           </label>
+          <div id='writeMessageContainer'>
           <textarea
             id="writeMessage"
             onChange={this.writeMessage}
             value={this.state.messageValue}
           ></textarea>
+          </div>
           <label id="contactUsRodoLabel" htmlFor="rodoClausuleInput">
             <input
               id="rodoClausuleInput"
