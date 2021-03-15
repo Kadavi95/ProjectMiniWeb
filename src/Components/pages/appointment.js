@@ -22,6 +22,14 @@ class Appointment extends Component {
       wrongOur: "Musisz wybrać godzinę z zakresu od 8 do 16",
       wrongRodoClausule: "Musisz zaznaczyć to pole. aby wysłać formularz",
     },
+    placeHolders: {
+        name: 'Wpisz swoje imię',
+        surName: 'Wpisz swoje nazwisko',
+        telephoneNumber: 'Podaj swój numer',
+        hour: 'Zaznacz godzinę wizyty',
+        message: 'Tu możesz wpisać swoje uwagi'
+    }
+   
   };
   submitForm = (e) => {
     e.preventDefault();
@@ -86,6 +94,7 @@ class Appointment extends Component {
       this.state.name.indexOf(7) === -1 && 
       this.state.name.indexOf(8) === -1 && 
       this.state.name.indexOf(9) === -1 && 
+      this.state.surName !== false &&
       this.state.surName.indexOf(0) === -1 && 
       this.state.surName.indexOf(1) === -1 && 
       this.state.surName.indexOf(2) === -1 && 
@@ -96,7 +105,6 @@ class Appointment extends Component {
       this.state.surName.indexOf(7) === -1 && 
       this.state.surName.indexOf(8) === -1 && 
       this.state.surName.indexOf(9) === -1 && 
-      this.state.surName !== false &&
       this.state.telephoneNumber !== false &&
       this.state.hour !== false &&
       this.state.rodoClausule === true
@@ -179,6 +187,7 @@ class Appointment extends Component {
               type="text"
               value={this.state.name}
               onChange={this.changeName}
+              placeholder={this.state.placeHolders.name}
             />
             <div id="nameWarningDiv">
               <p>
@@ -193,6 +202,8 @@ class Appointment extends Component {
               type="text"
               value={this.state.surName}
               onChange={this.changeSurname}
+              placeholder={this.state.placeHolders.surName}
+              
             />
             <div id="surnameWarningDiv">
               <p>
@@ -209,6 +220,7 @@ class Appointment extends Component {
               type="number"
               value={this.state.telephoneNumber}
               onChange={this.changeTelephoneNumber}
+              placeholder={this.state.placeHolders.telephoneNumber}
             />
             <div id="numberWarningDiv">
               <p>
@@ -219,13 +231,14 @@ class Appointment extends Component {
             </div>
           </label>
 
-          <div id="selectDayContainer">
+          <div id="selectHourContainer">
             <select
               id="contactUsSelect"
               value={this.state.hour}
               onChange={this.changeHour}
+              placeholder
             >
-              <option value=" "> </option>
+              <option value=" " disabled>Wybierz godzinę</option>
               <option value="8:00">8:00</option>
               <option value="9:00">9:00</option>
               <option value="10:00">10:00</option>
