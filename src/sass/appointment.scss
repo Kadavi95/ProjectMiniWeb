@@ -152,6 +152,40 @@
         outline: none;
         overflow: scroll;
     }
-    
   }
+  #contactUsRodoLabel{
+    height: 10vh;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    #rodoClausuleInput{
+ 
+
+    }
+    #rodoClauseWarningDiv{
+        font-size: .8rem;
+        width: 90%;
+        text-align: left;
+        p {
+          color: $warningColor;
+        }
+    }
+  }
+  #contactUsButtonContainer{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    #contactUsMainButton{
+        text-transform: uppercase;
+        
+    }
+
+  }
+
 }

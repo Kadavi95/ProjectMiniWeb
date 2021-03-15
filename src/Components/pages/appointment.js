@@ -232,12 +232,12 @@ class Appointment extends Component {
               onChange={this.changeDay}
             />
           </label>
-          <div id='writeMessageContainer'>
-          <textarea
-            id="writeMessage"
-            onChange={this.writeMessage}
-            value={this.state.messageValue}
-          ></textarea>
+          <div id="writeMessageContainer">
+            <textarea
+              id="writeMessage"
+              onChange={this.writeMessage}
+              value={this.state.messageValue}
+            ></textarea>
           </div>
           <label id="contactUsRodoLabel" htmlFor="rodoClausuleInput">
             <input
@@ -247,13 +247,17 @@ class Appointment extends Component {
               value={this.state.rodoClausule}
               onChange={this.acceptRODO}
             />
+            <div id="rodoClauseWarningDiv">
+              <p>
+                {this.state.rodoClausule === false
+                  ? this.state.messages.wrongRodoClausule
+                  : ""}
+              </p>
+            </div>
           </label>
-          <p>
-            {this.state.rodoClausule === false
-              ? this.state.messages.wrongRodoClausule
-              : ""}
-          </p>
-          <button>Umów!</button>
+          <div id="contactUsButtonContainer">
+            <button id='contactUsMainButton'>Wyślij!</button>
+          </div>
         </form>
       </>
     );
