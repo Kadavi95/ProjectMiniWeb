@@ -42,25 +42,32 @@ class Appointment extends Component {
       });
     }
     if (
-        this.state.surName !== false &&
-        (this.state.surName.length < 2 ||
-          this.state.surName.indexOf(0) > -1 ||
-          this.state.surName.indexOf(1) > -1 ||
-          this.state.surName.indexOf(2) > -1 ||
-          this.state.surName.indexOf(3) > -1 ||
-          this.state.surName.indexOf(4) > -1 ||
-          this.state.surName.indexOf(5) > -1 ||
-          this.state.surName.indexOf(6) > -1 ||
-          this.state.surName.indexOf(7) > -1 ||
-          this.state.surName.indexOf(8) > -1 ||
-          this.state.surName.indexOf(9) > -1)
-      ) {
-        this.setState({
-            surName: false,
-        });
-      }
-      
-
+      this.state.surName !== false &&
+      (this.state.surName.length < 2 ||
+        this.state.surName.indexOf(0) > -1 ||
+        this.state.surName.indexOf(1) > -1 ||
+        this.state.surName.indexOf(2) > -1 ||
+        this.state.surName.indexOf(3) > -1 ||
+        this.state.surName.indexOf(4) > -1 ||
+        this.state.surName.indexOf(5) > -1 ||
+        this.state.surName.indexOf(6) > -1 ||
+        this.state.surName.indexOf(7) > -1 ||
+        this.state.surName.indexOf(8) > -1 ||
+        this.state.surName.indexOf(9) > -1)
+    ) {
+      this.setState({
+        surName: false,
+      });
+    }
+    if (
+      this.state.telephoneNumber !== false &&
+      (this.state.telephoneNumber.length > 16 ||
+        this.state.telephoneNumber.length < 5)
+    ) {
+      this.setState({
+        telephoneNumber: false,
+      });
+    }
   };
 
   changeName = (e) => {
@@ -131,7 +138,9 @@ class Appointment extends Component {
             />
           </label>
           <p>
-              {this.state.surName === false ? this.state.messages.wrongSurname : ''}
+            {this.state.surName === false
+              ? this.state.messages.wrongSurname
+              : ""}
           </p>
           <label htmlFor="">
             <input
