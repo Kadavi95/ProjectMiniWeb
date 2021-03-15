@@ -151,6 +151,7 @@
         width: 50%;
         outline: none;
         overflow: scroll;
+        resize: none; 
     }
   }
   #contactUsRodoLabel{
@@ -163,7 +164,6 @@
     justify-content: space-between;
     #rodoClausuleInput{
  
-
     }
     #rodoClauseWarningDiv{
         font-size: .8rem;
@@ -183,9 +183,7 @@
     justify-content: center;
     #contactUsMainButton{
         text-transform: uppercase;
-        
+
     }
-
   }
-
 }

@@ -76,6 +76,26 @@ class Appointment extends Component {
       });
     } else if (
       this.state.name !== false &&
+      this.state.name.indexOf(0) === -1 && 
+      this.state.name.indexOf(1) === -1 && 
+      this.state.name.indexOf(2) === -1 && 
+      this.state.name.indexOf(3) === -1 && 
+      this.state.name.indexOf(4) === -1 && 
+      this.state.name.indexOf(5) === -1 && 
+      this.state.name.indexOf(6) === -1 && 
+      this.state.name.indexOf(7) === -1 && 
+      this.state.name.indexOf(8) === -1 && 
+      this.state.name.indexOf(9) === -1 && 
+      this.state.surName.indexOf(0) === -1 && 
+      this.state.surName.indexOf(1) === -1 && 
+      this.state.surName.indexOf(2) === -1 && 
+      this.state.surName.indexOf(3) === -1 && 
+      this.state.surName.indexOf(4) === -1 && 
+      this.state.surName.indexOf(5) === -1 && 
+      this.state.surName.indexOf(6) === -1 && 
+      this.state.surName.indexOf(7) === -1 && 
+      this.state.surName.indexOf(8) === -1 && 
+      this.state.surName.indexOf(9) === -1 && 
       this.state.surName !== false &&
       this.state.telephoneNumber !== false &&
       this.state.hour !== false &&
