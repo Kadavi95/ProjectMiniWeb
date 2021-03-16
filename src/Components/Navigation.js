@@ -121,11 +121,4 @@ class Navigation extends Component {
 
 export default Navigation;
 
-{
-  /* <i class="fas fa-bars"></i>
-<i class="fas fa-times"></i>
-<i class="fab fa-facebook-f"></i>
-<i class="fab fa-instagram"></i>
-<i class="fab fa-twitter"></i>
-<i class="fas fa-paw"></i> */
-}
+

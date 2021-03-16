@@ -1,8 +1,10 @@
-import React, {useState, useEffect} from 'react';
-
+import React, {useEffect, useState} from 'react';
+import fakeData from '../../Elements/fakeData';
 
 const AboutUs = () => {
-    return ( <> 
+
+return ( <> 
+    
     </> );
 }
  
