@@ -1,48 +1,92 @@
 import React, { useEffect, useState } from "react";
 import fakeData from "../../Elements/fakeData";
 
-//stała równa 3//
-const row = 3;
-//Tworze tablicę zawierającą 3 stringi-każdego użyję do oddzielnego mainButtonu, kaźdy string ma swój własny index-obvious//
-const organizationsNames = fakeData.map(({ type }) => type);
+const rowNumber = 3;
+const organizationsName = fakeData.map(({ type }) => type);
+console.log(organizationsName);
 
+const ListRow = ({ name, description, items }) => (
+  <div >
+    <div >
+      <p>{name}</p>
+      <p>{description}</p>
+    </div>
+    <div >
+      {items.map((item) => (
+        <div  style={{ marginLeft: ".3rem" }}>
+          {item}
+        </div>
+      ))}
+    </div>
+  </div>
+);
+console.log(ListRow);
 
+const paginate = (array, pageNumber) => {
+
+  console.log(array.slice((pageNumber - 1) * rowNumber));
+  return array.slice((pageNumber - 1) * rowNumber, pageNumber * rowNumber);
+};
+const Buttons = ({ totalItems, setCurrentPage }) => {
+  const arr = [];
+  const numberOfButtons = totalItems / rowNumber;
+  for (let i = 0; i < numberOfButtons; i++) {
+    arr.push(i);
+  }
+  return arr.map((i) => (
+    <button className="switch_button" onClick={() => setCurrentPage(i + 1)}>
+      {i + 1}
+    </button>
+  ));
+};
 
 const AboutUs = () => {
-// indexOrganization-do przerzucania między zawartością main buttonów, domyślnie od 0(lleft)//
-//set Data -przechowuje jeden z 3 obieków, domyślnie pierwszy, meetoda setDate to zmiany//
-//Pieerwszy useEffeect- po pierwsze domyślnie po każdej zmiannie indexOrganization zmiani wartość currentPage na 1 (tak by przeskakiwaniu między strronami, gdy jedna ma większą zawartość od drugie nie doszło do błędów.) Po drugie ustawi obiekt wykorzystuje metodę setDate, tak by wskazywało obekt po indexie)//
+  // indexOrganization-do przerzucania między zawartością main buttonów, domyślnie od 0(lleft)//
+  //set Data -przechowuje jeden z 3 obieków, domyślnie pierwszy, meetoda setDate to zmiany//
+  //Pieerwszy useEffeect- po pierwsze domyślnie po każdej zmiannie indexOrganization zmiani wartość currentPage na 1 (tak by przeskakiwaniu między strronami, gdy jedna ma większą zawartość od drugie nie doszło do błędów.) Po drugie ustawi obiekt wykorzystuje metodę setDate, tak by wskazywało na dany obiekt  po indexie)//
+    //Drugi useEffect ustawi odpowiednie dane, wyskozystując fukcjn paginate która przyjmuje dwa parametry- array i page number. Pod parametr 
 
   const [indexOrganization, setIndexOrganization] = useState(0);
-  const [data, setData] = useState(fakeData[0]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [currentPageData, setCurrentPageData] = useState(null)
+  const [data, setData] = useState(fakeData[0]);
+  const [currentPageData, setCurrentPageData] = useState(null);
+  console.log(data);
+  useEffect(() => {
+    setCurrentPage(1);
+    setData(fakeData[indexOrganization]);
+  }, [indexOrganization]);
 
   useEffect(() => {
-    setCurrentPage(1)
-    setData(fakeData[indexOrganization])
-  }, [indexOrganization] )
-
-  useEffect(() => {
-      setCurrentPage(paginate(data.organizations.currentPage))
-  }, [data, currentPage])
+    setCurrentPageData(paginate(data.organizations, currentPage));
+  }, [data, currentPage]);
 
   console.log(indexOrganization);
-  console.log(data);
   return (
     <>
-      <main className="aboutUsContainer">
-        {/* Tworzę  div'a a w nim mapuję po tablicy organizationNames. Każdy button dostaje name jako zawartość oraz onClick który wywoła setIndexOrganization(z indexem) po kliknięciu. Dla wyjęcia błędów, każdemu buttonowi daję ID równemu indeksowi */}
-        <div className="organisationsContainer">
-          {organizationsNames.map((name, i) => (
-            <button id={i}onClick={() => setIndexOrganization(i)}>{name}</button>
+      <main >
+        <div >
+          {organizationsName.map((name, i) => (
+            <button
+              key = {i}
+              className="fundations_main-button"
+              onClick={() => setIndexOrganization(i)}
+            >
+              {name}
+            </button>
           ))}
         </div>
-        <div className='dataContainer'>
-
+        <div >
+          {currentPageData?.map(({ name, description, items }) => (
+            <ListRow name={name} description={description} items={items} />
+          ))}
         </div>
-        <div className="buttonsContainer">
-
+        <div
+          style={{ display: "flex", alignItems: "center" }}
+        >
+          <Buttons
+            totalItems={data.organizations.length}
+            setCurrentPage={setCurrentPage}
+          />
         </div>
       </main>
     </>
