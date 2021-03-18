@@ -1,1 +1,32 @@
 @import './variables';
+
+.aboutUsContainer{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-image: $invertedPrimaryColor;
+    .aboutUsSmallContainer {
+        width: 80%;
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        .aboutUsMainButtons{
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            background-color: blue;
+            .aboutUsSingleMainButton{
+                height: 5vh;
+                
+            }
+        }
+    }
+}
+
