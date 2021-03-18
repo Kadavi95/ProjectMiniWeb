@@ -6,7 +6,8 @@ import Navigation from './Components/Navigation';
 import homePage from './Components/pages/homePage';
 import contactus from './Components/pages/contactUs';
 import Appointment from './Components/pages/appointment';
-import AboutUs from './Components/pages/aboutUs'
+import AboutUs from './Components/pages/aboutUs';
+import ErrorComponent from './Components/pages/ErrorComponent';
 
 const App = () => {
   return ( <> 
@@ -17,6 +18,7 @@ const App = () => {
       <Route path='/aboutUs' exact = {true} component = {AboutUs} />
       <Route path='/contactUs' exact = {true} component={contactus} ></Route>
       <Route path='/appointment' exact = {true} component={Appointment} />
+      <Route component={ErrorComponent} />
     </Switch>
   </Router>
   </> );
