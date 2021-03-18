@@ -4,20 +4,19 @@ import "../../sass/aboutUs.scss";
 
 const rowNumber = 3;
 const organizationsName = fakeData.map(({ type }) => type);
-console.log(organizationsName);
 
 //komponent funkcyjny-nazwa, opis, i jego dzieci dla któ®ych iteruje po każdym twojrza dla niego diva z kluczem//
 const ListRow = ({ name, description, items }) => (
   <div className="ListRowMainCointainer">
     <div className="NameAndDestriptionContainer">
-      <p>{name}</p>
+      <h5>{name}</h5>
       <p>{description}</p>
     </div>
     <div className="ItemsContainer">
       {items.map((item) => (
-        <div key={item} className="singleItem">
+        <p className="singleItem">
           {item}
-        </div>
+        </p>
       ))}
     </div>
   </div>
