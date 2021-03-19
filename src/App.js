@@ -10,6 +10,7 @@ import AboutUs from './Components/pages/aboutUs';
 import ErrorComponent from './Components/pages/ErrorComponent';
 import products from './Components/pages/products';
 
+
 const App = () => {
   return ( <> 
   <Router>
@@ -19,6 +20,7 @@ const App = () => {
       <Route path='/aboutUs' exact = {true} component = {AboutUs} />
       <Route path='/contactUs' exact = {true} component={contactus} ></Route>
       <Route path='/products' exact = {true} component={products}/>
+      <Route path='/vaccinate' exact = {true} component={products}/>
       <Route path='/appointment' exact = {true} component={Appointment} />
       <Route component={ErrorComponent} />
     </Switch>
