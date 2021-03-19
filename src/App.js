@@ -21,7 +21,9 @@ const App = () => {
       <Route path='/contactUs' exact = {true} component={contactus} ></Route>
       <Route path='/products' exact = {true} component={products}/>
       <Route path='/vaccinate' exact = {true} component={products}/>
-      <Route path='/appointment' exact = {true} component={Appointment} />
+      <Route path='/treatment' exact = {true} component={products}/>
+      <Route path='/appointments' exact = {true} component={products}/>
+      <Route path='/appointment' exact = {true} component={Appointment}/>
       <Route component={ErrorComponent} />
     </Switch>
   </Router>
