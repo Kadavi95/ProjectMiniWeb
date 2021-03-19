@@ -1,4 +1,5 @@
 import React from "react";
+import '../../sass/products.scss'
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,6 +13,7 @@ import Appointments from './innerPages/Appointments';
 
 const Products = () => {
   return (
+    <div className='producstMainContainer'>
     <Router>
      <Buttons/>
         <Switch>
@@ -21,6 +23,7 @@ const Products = () => {
 
         </Switch>
     </Router>
+    </div>
   );
 };
 

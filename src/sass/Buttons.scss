@@ -13,11 +13,13 @@
         width: 10vw;
         height: 3vh;
         background-color: $sixthColor;
+        border-radius: 10px;
         .productsButton{
-            text-decoration: none !important;
-            color: #ffffff;
-            width: 100%;
-          
+            display: block;
+            text-decoration: none;
+            color: $fifthColor;
+        
+            
         }
     }
 }
