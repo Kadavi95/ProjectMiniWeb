@@ -5,10 +5,10 @@ const Buttons = () => {
     return ( 
         <div className='buttonsConatiner'>
             <button>
-                <Link to='szczepienia'>Szczepienia</Link>
+                <Link to='vaccinate'>Szczepienia</Link>
             </button>
             <button>
-                <Link>Zabiegi</Link>
+                <Link to= 'treatment'>Zabiegi</Link>
             </button>
             <button>
                 <Link>Wizyty</Link>

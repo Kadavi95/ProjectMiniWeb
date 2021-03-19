@@ -6,15 +6,17 @@ import {
   Route,
 } from "react-router-dom";
 import Buttons from '../Buttons'
+import Vaccinate from './innerPages/Vaccinate'
+import Treatment from "./innerPages/Treatment";
 
 const Products = () => {
   return (
     <Router>
      <Buttons/>
         <Switch>
-            <Route path = '/products/szczepienia' exact={true}/>
-            <Route/>
-            <Route/>
+            <Route path = '/vaccinate' exact={true} component = {Vaccinate}/>
+            <Route path = '/treatment' exact = {true} component={Treatment}/>
+            <Route to ='/appoint'/>
         </Switch>
     </Router>
   );
