@@ -1,4 +1,5 @@
 import React from "react";
+import '../../../sass/Vaccinate.scss';
 const VaccinatesBase = [
     {
         type: 'lorem0',
@@ -24,18 +25,27 @@ const VaccinatesBase = [
         type: 'lorem5',
         description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt adipisci earum veniam corporis nobis!',
     },
-]
+    {
+        type: 'lorem5',
+        description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt adipisci earum veniam corporis nobis!',
+    },
+   
 
+];
 
+const vaccinneLiClassName = 'singleVaccineLiElement';
+const vaccinneHClassName = 'singleVaccineHElement';
+const vaccinePClassName = 'singleVaccinePElement';
+const vaccineUlClassName = 'singleVaccineUlElement'
 
 const Vaccinate = () => {
     const singleVaccine = VaccinatesBase.map(({type, description}) => (
-        <li>
-            <h3>
+        <li className={vaccinneLiClassName}>
+            <h3 className={vaccinneHClassName}>
                 {type}
             </h3>
 
-            <p>
+            <p className={vaccinePClassName}>
                 {description}
             </p>
         </li>
@@ -44,7 +54,7 @@ const Vaccinate = () => {
   return (
     <>
       <div className="vaccinateContainer">
-            <ul>
+            <ul className={vaccineUlClassName}>
                 {singleVaccine}
             </ul>
       </div>
