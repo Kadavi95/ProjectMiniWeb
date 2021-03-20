@@ -3,7 +3,9 @@ import '../../../sass/Vaccinate.scss';
 const VaccinatesBase = [
     {
         type: 'lorem0',
-        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident quas nam reiciendis dolorum ex! Iste sint libero eos, nemo reiciendis quia sapiente expedita autem consequatur assumenda ex. Quae, eum dolorum?',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor placeat voluptatibus itaque ea reprehenderit delectus, voluptates non vitae nostrum nobis voluptatum, quos temporibus corporis aut quo suscipit! Ratione repudiandae quas minima enim hic labore distinctio. At aspernatur, ut laboriosam enim excepturi fugit natus repellat, aut, quos ex sequi optio animi? Nulla, alias sapiente officiis consequuntur sit quidem animi laboriosam nihil et quas optio ut eius ratione, voluptatem cum voluptates sint.',
+
+        
     },
     {
         type: 'lorem1',
@@ -26,9 +28,14 @@ const VaccinatesBase = [
         description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt adipisci earum veniam corporis nobis!',
     },
     {
-        type: 'lorem5',
-        description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt adipisci earum veniam corporis nobis!',
+        type: 'lorem6',
+        description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore nemo officia sapiente vel esse iure quidem reiciendis culpa atque porro? Neque sit perspiciatis minus aliquam blanditiis numquam beatae sunt quis saepe nobis magnam quisquam, repellendus nisi ducimus dolores iusto aperiam dignissimos doloribus possimus. Nemo eos, officia ut quibusdam nisi blanditiis quis autem sunt hic, eveniet voluptatem doloremque!',
+        
     },
+    {
+        type: 'lorem7',
+        description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam iste adipisci impedit voluptatum ipsum veritatis necessitatibus at, obcaecati fugit totam hic accusamus, blanditiis illo soluta sed reiciendis optio veniam iusto! Maiores, dolorem. Provident eius asperiores, enim aut placeat aliquam sed!'
+    }
    
 
 ];
