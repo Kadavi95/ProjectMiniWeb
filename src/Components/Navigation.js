@@ -86,7 +86,7 @@ class Navigation extends Component {
                   ? "logoLinkDay"
                   : "LogoLinkNight"
               }>
-                Przychodnia
+                VET
               </Link>
             </div>
             <div
