@@ -34,24 +34,31 @@ const procedures = [
     price: "105",
   },
 ];
-const currencyName = 'złotych'
+const currencyName = "złotych";
+const classNames =['treatmentContainer', 'treatmentTable', 'treatmentTableThead', 'treatmentTableTbody', 'treatmentTableTr', 'treatmentTableTh', 'treatmentTableTd'];
 const Treatment = () => {
-    const singleItem = procedures.map(({name, price}) => (
-        <tr>
-            <td>{name}</td>
-            <td>{price}{currencyName}</td>
-        </tr>
-    ))
+  const singleItem = procedures.map(({ name, price }) => (
+    <tr className={classNames[4]} key={name}>
+      <td className={classNames[6]}>{name}</td>
+      <td className={classNames[6]} >
+        {price}
+        {currencyName}
+      </td>
+    </tr>
+  ));
   return (
     <>
-      <table>
-        <tr>
-          <th>Zabieg</th>
-          <th>Cena</th>
-        </tr>
-        {singleItem}
-
+    <div className={classNames[0]}>
+      <table className={classNames[1]}>
+        <thead className={classNames[2]}>
+          <tr className={classNames[4]} >
+            <th className={classNames[5]}>Zabieg</th>
+            <th className={classNames[5]}>Cena</th>
+          </tr>
+        </thead>
+        <tbody className={classNames[3]}>{singleItem}</tbody>
       </table>
+      </div>
     </>
   );
 };
