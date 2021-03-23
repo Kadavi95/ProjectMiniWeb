@@ -47,14 +47,14 @@ const vaccineUlClassName = 'singleVaccineUlElement'
 
 const Vaccinate = () => {
     const singleVaccine = VaccinatesBase.map(({type, description}) => (
-        <li className={vaccinneLiClassName}>
+        <li key= {type} className={vaccinneLiClassName}>
             <h3 className={vaccinneHClassName}>
                 {type}
             </h3>
 
-            <p className={vaccinePClassName}>
+            <div className={vaccinePClassName}>
                 {description}
-            </p>
+            </div>
         </li>
     ))
 
