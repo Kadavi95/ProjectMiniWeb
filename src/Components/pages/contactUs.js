@@ -1,4 +1,5 @@
 import React from "react";
+import '../../sass/contactUs.scss';
 
 const date = [
   {
@@ -14,20 +15,20 @@ const date = [
     content: "Loremowa 13, Loremów Dolny",
   },
   {
-    type: "NIP",
+    type: "NIP:",
     content: "90-123-0142-13123",
   },
   {
-    type: "KRS",
+    type: "KRS:",
     content: "0001000300423612",
   },
 ];
-const classNames = ["contactus_container", "mainContainer", 'singleDateContainer'];
+const classNames = ["contactus_container", "mainContainer", 'singleDateContainer', 'firstDate', 'secondDate'];
 const contactUs = () => {
   const singleDataContainer = date.map(({ type, content }) => (
     <div key={type} className={classNames[2]}>
-      <p>{type}</p>
-      <p>{content}</p>
+      <p className={classNames[3]}>{type}</p>
+      <p className={classNames[4]}>{content}</p>
     </div>
   ));
   return (
