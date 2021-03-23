@@ -22,7 +22,7 @@ const App = () => {
       <Route path='/products' exact = {true} component={products}/>
       <Route path='/vaccinate' exact = {true} component={products}/>
       <Route path='/treatment' exact = {true} component={products}/>
-      <Route path='/appointments' exact = {true} component={products}/>
+
       <Route path='/appointment' exact = {true} component={Appointment}/>
       <Route component={ErrorComponent} />
     </Switch>

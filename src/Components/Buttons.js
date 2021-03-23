@@ -2,8 +2,8 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import '../sass/Buttons.scss';
 
-const linkTo= ['vaccinate', 'treatment', 'appointments'];
-const linkTextContent = ['Szczepienia',  'Zabiegi', 'Wizyty' ];
+const linkTo= ['vaccinate', 'treatment'];
+const linkTextContent = ['Szczepienia',  'Zabiegi', ];
 const linkClassName = 'productsButton';
 
 
