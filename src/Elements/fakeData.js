@@ -1,6 +1,6 @@
 const fakeData = [
   {
-    type: "Fundacjom",
+    type: "Nasz działalnośc",
     organizations: [
       {
         name: "Fundacja 'Dbam o zdrowie' ",
@@ -50,7 +50,7 @@ const fakeData = [
     ],
   },
   {
-    type: "Organizacjom pozarządowym",
+    type: "Współpracujemy z",
     organizations: [
       {
         name: "Organizacja 'Lorem Ipsum 1'",
@@ -86,7 +86,7 @@ const fakeData = [
     ],
   },
   {
-    type: "Lokalnym zbiórkom",
+    type: "Dlaczego my",
     organizations: [
       {
         name: "'Zbiórka 'Lorem Ipsum 1'",
