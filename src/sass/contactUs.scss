@@ -11,8 +11,8 @@
   .mainContainer{
     height: 30vh;
     width: 35%;
-    border: 1px solid black;
-    @media screen and (max-width: 1000px) {
+    
+    @media screen and (max-width: 1024px) {
         width: 85%;
     }
     .singleDateContainer{

@@ -3,6 +3,7 @@ import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 import Navigation from './Components/Navigation';
+import Footer from './Components/Footer';
 import homePage from './Components/pages/homePage';
 import contactus from './Components/pages/contactUs';
 import Appointment from './Components/pages/appointment';
@@ -22,10 +23,10 @@ const App = () => {
       <Route path='/products' exact = {true} component={products}/>
       <Route path='/vaccinate' exact = {true} component={products}/>
       <Route path='/treatment' exact = {true} component={products}/>
-
       <Route path='/appointment' exact = {true} component={Appointment}/>
       <Route component={ErrorComponent} />
     </Switch>
+    <Footer></Footer>
   </Router>
   </> );
 }
