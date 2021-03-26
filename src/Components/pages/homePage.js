@@ -4,14 +4,12 @@ import secondPhoto from "../images/159324348_122258026456601_3731502239306874094
 import thirdPhoto from "../images/20210207_150936.jpg";
 import "../../sass/homePage.scss";
 
-
 import { Link } from "react-router-dom";
 
 const imagesTable = [firstPhoto, secondPhoto, thirdPhoto];
 const indexMaxValue = imagesTable.length - 1;
 const index = Math.floor(Math.random() * (indexMaxValue - 0 + 1) + 0);
 const singleImage = imagesTable[index];
-
 
 class homePage extends Component {
   state = {
@@ -31,21 +29,25 @@ class homePage extends Component {
   };
 
   render() {
-
     return (
       <>
-
-        <div className="homePageContainer">
-          <img
-            id="photo"
-            className="singlePhoto"
-            src={this.state.image}
-            alt="obraz"
-          />
+        <div className="homeMainContainer">
+          <div className="homePageContainer">
+            <img
+              id="photo"
+              className="singlePhoto"
+              src={this.state.image}
+              alt="obraz"
+            />
+          </div>
+          <div className="contactUsContainer">
+            <button className="contactButtonLink">
+              <Link className="buttonLink" to="appointment">
+                Umów wizytę
+              </Link>
+            </button>
+          </div>
         </div>
-      <div className='contactUsContainer'>
-        <button className='contactButtonLink'><Link className="buttonLink" to="appointment">Umów wizytę</Link></button>
-      </div>
       </>
     );
   }
