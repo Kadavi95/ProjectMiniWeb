@@ -31,6 +31,7 @@
   .hamburgerMenuDay,
   .hamburgerMenuNight {
     display: none;
+    cursor: pointer;
     @media screen and (max-width: 1028px) {
       display: block;
       width: 30vw;
@@ -178,9 +179,17 @@
 }
 .hamburgerMenuDay{
   color: $sixthColor;
+  transition: all .35s ease-in-out;
+  &:hover {
+    color: $thirdColor;
+  }
 }
 .hamburgerMenuNight{
   color: $fifthColor;
+  transition: all .35s ease-in-out;
+  &:hover {
+    color: $fourthColor;
+  }
 }
 .logoLinkDay {
   color: $sixthColor;
@@ -200,7 +209,7 @@
     color: $fourthColor;
     // border-bottom: 2px solid $fourthColor;
     @media screen and (min-width: 1030px) {
-      border-bottom: 2px solid $thirdColor;
+      border-bottom: 2px solid $fourthColor;
     }
   }
 }
