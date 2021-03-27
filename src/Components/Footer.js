@@ -18,9 +18,6 @@ const linksAndIcons = [
     },
 ]
 
-
-
-
 const Footer = () => {
     const singlePage = linksAndIcons.map(({links, icons, artificialID}) => (
         <a href={links} className={icons} id={artificialID} target='_blank'></a>

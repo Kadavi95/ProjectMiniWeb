@@ -27,6 +27,7 @@
             color: $sixthColor;
             transition: all .35s ease-in-out;
             cursor: pointer;
+            text-decoration: none;
             @media screen and (min-width: 1367px){
                 &:hover {
                     color: $thirdColor;

@@ -24,7 +24,9 @@ class Navigation extends Component {
       });
   };
   turnOffMobileMenu = () => {
-
+    this.setState({
+        mobile: false
+    })
   }
 
   closeMobileMenu = () => {

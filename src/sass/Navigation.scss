@@ -36,10 +36,12 @@
       width: 30vw;
       text-align: right;
       margin-right: 5vw;
+      transition: all 0.35s ease-in-out;
     }
     .fa-times {
     }
-    .fa-times {
+    .fa-bars {
+
     }
   }
   .menuActive {
@@ -49,7 +51,7 @@
     grid-template-columns: (repeat(4, auto));
     grid-gap: 10px;
     text-align: center;
-    transition: all .5s ease;
+    transition: all .35s ease;
     @media screen and (max-width: 1030px) {
       margin-right: 0vw;
       position: absolute;
@@ -62,6 +64,7 @@
       animation: activeMenuAnimation .4s linear;
       left: 0%;
       text-align: center;
+      z-index: 10;
       @keyframes activeMenuAnimation {
           0%{
             left: -100%;
@@ -107,7 +110,7 @@
     grid-template-columns: (repeat(4, auto));
     grid-gap: 10px;
     text-align: center;
-    transition: all 0.5 ease;
+    transition: all 0.35 ease;
  
     @media screen and (max-width: 1030px) {
       margin-right: 0vw;
@@ -122,6 +125,7 @@
       animation: unactiveMenuAnimation .4s 
       linear;
       left: -100%;
+      z-index: 10;
      
       @keyframes unactiveMenuAnimation {
           0%{
@@ -172,10 +176,15 @@
 }
 .logoContainerNight {
 }
-
+.hamburgerMenuDay{
+  color: $sixthColor;
+}
+.hamburgerMenuNight{
+  color: $fifthColor;
+}
 .logoLinkDay {
   color: $sixthColor;
-  transition: all 0.2s ease-in;
+  transition: all 0.35s ease-in;
   &:hover {
     color: $thirdColor;
     border-bottom: 2px solid $thirdColor;
@@ -183,7 +192,7 @@
 }
 .LogoLinkNight {
   color: $fifthColor;
-  transition: all 0.2s ease-in;
+  transition: all 0.35s ease-in;
   &:hover {
     color: $fourthColor;
     border-bottom: 2px solid $fourthColor;
@@ -202,7 +211,7 @@
 }
 .liLinkElement {
   color: $sixthColor;
-  transition: all 0.2s ease-in;
+  transition: all 0.35s ease-in;
   &:hover {
     color: $thirdColor;
     border-bottom: 2px solid $thirdColor;
@@ -216,7 +225,7 @@
 }
 .liLinkElementNight {
   color: $fifthColor;
-  transition: all 0.2s ease-in;
+  transition: all 0.35s ease-in;
   &:hover {
     color: $fourthColor;
     border-bottom: 2px solid $fourthColor;
