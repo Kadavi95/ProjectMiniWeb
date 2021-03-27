@@ -187,7 +187,10 @@
   transition: all 0.35s ease-in;
   &:hover {
     color: $thirdColor;
-    border-bottom: 2px solid $thirdColor;
+    // border-bottom: 2px solid $thirdColor;
+    @media screen and (min-width: 1030px) {
+      border-bottom: 2px solid $thirdColor;
+    }
   }
 }
 .LogoLinkNight {
@@ -195,7 +198,10 @@
   transition: all 0.35s ease-in;
   &:hover {
     color: $fourthColor;
-    border-bottom: 2px solid $fourthColor;
+    // border-bottom: 2px solid $fourthColor;
+    @media screen and (min-width: 1030px) {
+      border-bottom: 2px solid $thirdColor;
+    }
   }
 }
 .menuDayMode {
