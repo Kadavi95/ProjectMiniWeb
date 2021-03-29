@@ -25,7 +25,7 @@ const CMS = () => {
 
   const singleMessage = appointments.map((item, i) => (
     <>
-      <tr key={i} className="cms_tbody_firstRow">
+      <tr key={i} className={`cms_tbody_firstRow ${i % 2 === 0 ? 'even' : "odd"} `}>
         <td className="firstRow_date">{i}</td>
         <td className="firstRow_date">{item.name}</td>
         <td className="firstRow_date">{item.surName}</td>
@@ -33,7 +33,7 @@ const CMS = () => {
         <td className="firstRow_date">{item.hour}</td>
         <td className="firstRow_date">{item.telephoneNumber}</td>
       </tr>
-      <tr className="cms_tbody-secondRow">
+      <tr key={i} className={`cms_tbody-secondRow ${i % 2 === 0 ? 'even' : "odd"}`}>
         <td className="secondRow_message">Wiadomość</td>
         <td className="secondRow_message-content">
           {item.messageValue !== "" ? item.messageValue : <p>Brak uwag</p>}
