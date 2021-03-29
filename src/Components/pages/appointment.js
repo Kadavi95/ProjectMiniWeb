@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../../sass/appointment.scss";
+import { firestore } from '../firebase';
 
 class Appointment extends Component {
   minDate = new Date().toISOString().slice(0, 10);
@@ -110,6 +111,23 @@ class Appointment extends Component {
       this.state.rodoClausule === true
     ) {
       alert("Formularz został wysłany");
+
+      const name = this.state.name;
+      const surName = this.state.surName;
+      const telephoneNumber = this.state.telephoneNumber;
+      const day = this.state.day;
+      const hour = this.state.hour;
+      const messageValue = this.state.messageValue;
+      const rodoClausule = this.state.rodoClausule; 
+      firestore.collection('appointments').add({
+        name,
+        surName,
+        telephoneNumber,
+        day,
+        hour,
+        messageValue,
+        rodoClausule
+      })
       const primaryClearValue = "";
       const secondaryClearValue = " ";
       this.setState({
@@ -184,6 +202,7 @@ class Appointment extends Component {
           <label id="contactUsNameLabel" htmlFor="name">
             <input
               id="name"
+              name='name'
               type="text"
               value={this.state.name}
               onChange={this.changeName}
@@ -199,6 +218,7 @@ class Appointment extends Component {
           <label id="contactUsSurnameLabel" htmlFor="surName">
             <input
               id="surName"
+              name='surName'
               type="text"
               value={this.state.surName}
               onChange={this.changeSurname}
@@ -217,6 +237,7 @@ class Appointment extends Component {
           <label id="contactUsTelephoneLabel" htmlFor="number">
             <input
               id="number"
+              name="number"
               type="number"
               value={this.state.telephoneNumber}
               onChange={this.changeTelephoneNumber}
@@ -234,6 +255,7 @@ class Appointment extends Component {
           <div id="selectHourContainer">
             <select
               id="contactUsSelect"
+              name="contactUsSelect"
               value={this.state.hour}
               onChange={this.changeHour}
               placeholder
@@ -258,6 +280,7 @@ class Appointment extends Component {
           <label id="contactUsDateLabel" htmlFor="date">
             <input
               id="data"
+              nam='data'
               type="date"
               value={this.state.day}
               min={this.minDate}
@@ -268,6 +291,7 @@ class Appointment extends Component {
           <div id="writeMessageContainer">
             <textarea
               id="writeMessage"
+              name='writeMessage'
               onChange={this.writeMessage}
               value={this.state.messageValue}
             ></textarea>
@@ -275,6 +299,7 @@ class Appointment extends Component {
           <label id="contactUsRodoLabel" htmlFor="rodoClausuleInput">
             <input
               id="rodoClausuleInput"
+              name='checkbox'
               type="checkbox"
               checked={this.state.rodoClausule}
               value={this.state.rodoClausule}
@@ -289,7 +314,7 @@ class Appointment extends Component {
             </div>
           </label>
           <div id="contactUsButtonContainer">
-            <button id='contactUsMainButton'>Wyślij!</button>
+            <button id='contactUsMainButton' name='contactUsMainButton'>Wyślij!</button>
           </div>
         </form>
       </>
