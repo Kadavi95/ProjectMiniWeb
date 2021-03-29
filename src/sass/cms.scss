@@ -8,7 +8,7 @@
     justify-content: center;
     align-items: center;
     .cms_table_container {
-        width: 96vw;
+        width: 97vw;
         height: 60vh;
         margin: 0 auto;
         background-color: whitesmoke;
@@ -38,7 +38,42 @@
 
             }
             .cms_table-tbody{
-
+                border-left: 1px solid black ;
+                border-top: 1px solid black ;
+                border-bottom: 1px solid black ;
+                width: 100%;
+                .cms_tbody_firstRow{
+                    height: 5vh;
+                    line-height: 5vh;
+                    display: flex;
+                    flex-direction: row;
+                    border-bottom: 1px solid black;
+                    .firstRow_date{
+                        width: 16vw;
+                        border-right: 1px solid black;
+                        text-align: center;
+                        font-size: 1rem;
+                    }
+                }
+                .cms_tbody-secondRow{
+                    height: 5vh;
+                    line-height: 5vh;
+                    display: flex;
+                    flex-direction: row;
+                    border-bottom: 1px solid black;
+                    .secondRow_message{
+                        width: 32vw;
+                        border-right: 1px solid black;
+                        text-align: center;
+                        font-size: 1rem;
+                    }
+                    .secondRow_message-content{
+                        border-right: 1px solid black;
+                        text-align: center;
+                        overflow: scroll;
+                        width: 64vw;
+                    }
+                }
             }
         }
     }
