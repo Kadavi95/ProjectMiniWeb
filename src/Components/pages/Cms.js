@@ -53,7 +53,7 @@ const CMS = () => {
                         <th className='cms_table-th'>Nazwisko</th>
                         <th className='cms_table-th'>Dzień</th>
                         <th className='cms_table-th'>Godzina</th>
-                        <th className='cms_table-th'>Number tel</th>
+                        <th className='cms_table-th'>Telefon</th>
                     </tr>
                 </thead>
                 <tbody className='cms_table-tbody'>
