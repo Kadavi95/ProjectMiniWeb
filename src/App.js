@@ -10,7 +10,7 @@ import Appointment from './Components/pages/appointment';
 import AboutUs from './Components/pages/aboutUs';
 import ErrorComponent from './Components/pages/ErrorComponent';
 import products from './Components/pages/products';
-
+import Cms from './Components/pages/Cms';
 
 const App = () => {
   return ( <> 
@@ -23,6 +23,7 @@ const App = () => {
       <Route path='/products' exact = {true} component={products}/>
       <Route path='/vaccinate' exact = {true} component={products}/>
       <Route path='/treatment' exact = {true} component={products}/>
+      <Route path='/cms' exact = {true} component={Cms}/>
       <Route path='/appointment' exact = {true} component={Appointment}/>
       <Route component={ErrorComponent} />
     </Switch>
