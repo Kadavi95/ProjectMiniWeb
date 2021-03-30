@@ -31,12 +31,12 @@
           flex-direction: row;
           width: 96vw;
           :nth-child(even) {
-              background-color: $fifthColor;
-              color: $sixthColor;
+            background-color: $seventhColor;
+            color: $sixthColor;
           }
           :nth-child(odd) {
-                background-color: $sixthColor;
-                color: $fifthColor;
+            background-color: $eightColor;
+            color: $fifthColor;
           }
           .cms_table-th {
             width: 16vw;
@@ -49,22 +49,20 @@
         border-top: 1px solid black;
         border-bottom: 1px solid black;
         width: 100%;
-        
+
         .cms_tbody_firstRow {
           height: 5vh;
           line-height: 5vh;
           display: flex;
           flex-direction: row;
-          border-bottom: 1px solid black;
           width: 96vw;
-          :nth-last-child(1){
+          :nth-last-child(1) {
             border-right: 1px solid black;
-        }
+          }
           .firstRow_date {
             width: 16vw;
             text-align: center;
             font-size: 1rem;
-         
           }
         }
         .cms_tbody-secondRow {
@@ -74,9 +72,11 @@
           flex-direction: row;
           border-bottom: 1px solid black;
           width: 96vw;
-          :nth-last-child(1){
+          :nth-last-child(1) {
             border-right: 1px solid black;
-        }
+            border-bottom: none;
+          }
+
           .secondRow_message {
             width: 32vw;
             text-align: center;
@@ -87,16 +87,16 @@
             overflow: scroll;
             width: 64vw;
           }
-        }     
-    }
+        }
+      }
     }
   }
 }
 .even {
-    background-color: $eightColor;
-    color: $fifthColor;
+  background-color: $eightColor;
+  color: $fifthColor;
 }
 .odd {
-    background-color: $seventhColor;
-    color: $sixthColor;
+  background-color: $seventhColor;
+  color: $sixthColor;
 }
