@@ -1,0 +1,40 @@
+{
+  "links": [
+    {
+      "id": 0,
+      "link": "aboutUs",
+      "title": "O nas",
+      "firstClassName": "liElementDay",
+      "secondClassName": "LiElementNight",
+      "itemClassName" : "liLinkElement",
+      "itemClassNameNight" : "liLinkElementNight"
+    },
+    {
+      "id": 1,
+      "link": "products",
+      "title": "Oferta",
+      "firstClassName": "liElementDay",
+      "secondClassName": "LiElementNight",
+      "itemClassName" : "liLinkElement",
+      "itemClassNameNight" : "liLinkElementNight"
+    },
+    {
+      "id": 2,
+      "link": "contactUs",
+      "title": "Kontakt",
+      "firstClassName": "liElementDay",
+      "secondClassName": "LiElementNight",
+      "itemClassName" : "liLinkElement",
+      "itemClassNameNight" : "liLinkElementNight"
+    },
+    {
+      "id": 3,
+      "link": "appointment",
+      "title": "Umów wizytę",
+      "firstClassName": "liElementDay",
+      "secondClassName": "LiElementNight",
+      "itemClassName" : "liLinkElement",
+      "itemClassNameNight" : "liLinkElementNight"
+    }
+  ]
+}
