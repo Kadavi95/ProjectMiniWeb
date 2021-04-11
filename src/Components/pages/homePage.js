@@ -9,7 +9,8 @@ import { Link } from "react-router-dom";
 const imagesTable = [firstPhoto, secondPhoto, thirdPhoto];
 const indexMaxValue = imagesTable.length - 1;
 const index = Math.floor(Math.random() * (indexMaxValue - 0 + 1) + 0);
-const singleImage = imagesTable[index];
+let fakeIndex = 0;
+const singleImage = imagesTable[fakeIndex];
 
 class homePage extends Component {
   state = {
@@ -21,21 +22,38 @@ class homePage extends Component {
   changePhoto = () => {
     const imagesTable = [firstPhoto, secondPhoto, thirdPhoto];
     const indexMaxValue = imagesTable.length - 1;
- 
-    // let index = Math.floor(Math.random() * (indexMaxValue - 0 + 1) + 0)
-    let number = 0;
-    if (number <= 3){
-      setInterval(function(){
-        let falseFlag = true
-        if (number < 3){
-          number++
-        }
-          if (number === 3 && number > -1) {
-            number--
-          }
-        console.log(number);
-      },1000)
+
+    let index = Math.floor(Math.random() * (indexMaxValue - 0 + 1) + 0);
+    console.log(fakeIndex);
+
+    let newIndex = 0
+    for(let i = 0; i < imagesTable.length; i++){
+      
     }
+
+
+
+    // let number = 0;
+    // if (number <= 3) {
+    //   setInterval(function () {
+    //     let falseflag = false;
+    //     if (number < 3) {
+    //       number++;
+    //       if (number === 2) {
+    //         falseflag = true
+    //       }
+    //     }
+    //     else if (falseflag === true) {
+
+    //     }
+    //     console.log(falseflag);
+    //     // else if (number === 2) {
+    //     //     number--
+    //     // }
+    //     console.log(number);
+    //   }, 1000);
+    // }
+
     
 
     const singleImage = imagesTable[index];
@@ -71,11 +89,3 @@ class homePage extends Component {
 
 export default homePage;
 
-
-
-// if (index < indexMaxValue){
-//   setTimeout(function(){
-//     console.log('Hello');
-//     index++
-//   },1000)
-// }
