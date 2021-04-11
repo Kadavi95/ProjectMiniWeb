@@ -26,10 +26,12 @@ class homePage extends Component {
     let index = Math.floor(Math.random() * (indexMaxValue - 0 + 1) + 0);
     console.log(fakeIndex);
 
-    let newIndex = 0
-    for(let i = 0; i < imagesTable.length; i++){
+
+    // let newIndex = 0
+    // if(fakeIndex === 0) {
       
-    }
+    // }
+    // console.log(newIndex);
 
 
 
