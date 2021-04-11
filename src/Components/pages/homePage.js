@@ -12,6 +12,8 @@ const index = Math.floor(Math.random() * (indexMaxValue - 0 + 1) + 0);
 let fakeIndex = 0;
 const singleImage = imagesTable[fakeIndex];
 
+let globalIndex = 0
+
 class homePage extends Component {
   state = {
     image: singleImage,
@@ -27,6 +29,13 @@ class homePage extends Component {
     console.log(fakeIndex);
 
 
+
+    if (globalIndex === 0){
+      globalIndex++
+    } else if (globalIndex === 2) {
+      globalIndex--
+    }
+    console.log(globalIndex);
     // let newIndex = 0
     // if(fakeIndex === 0) {
       
