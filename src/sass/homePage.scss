@@ -1,16 +1,17 @@
 @import "./variables";
 
-// .homeMainContainer {
-//     width: 100%;
-//     height: 80vh;
-//     position: relative;
-//     background-image: $invertedPrimaryColor;
-//     z-index: -11;
+.homeMainContainer {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    background-image: $invertedPrimaryColor;
+    z-index: -11;
   .homePageContainer {
     height: 75vh;
     width: 80%;
     margin: 0 auto;
     overflow: hidden;
+
     .singlePhoto {
       position: relative;
       top: 50%;
@@ -18,7 +19,7 @@
       transform: translate(-50%, -50%);
       max-width: 100%;
       height: 100%;
-      z-index: -10;
+ 
     }
   }
   .contactUsContainer {
@@ -35,7 +36,6 @@
       text-transform: uppercase;
       outline: none;
       font-size: 0.6rem;
-      
       cursor: pointer;
       .buttonLink {
         display: block;
@@ -45,4 +45,4 @@
       }
     }
   }
-// }
+}

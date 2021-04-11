@@ -42,7 +42,6 @@
     .fa-times {
     }
     .fa-bars {
-
     }
   }
   .menuActive {
@@ -52,7 +51,7 @@
     grid-template-columns: (repeat(4, auto));
     grid-gap: 10px;
     text-align: center;
-    transition: all .35s ease;
+    transition: all 0.35s ease;
     @media screen and (max-width: 1030px) {
       margin-right: 0vw;
       position: absolute;
@@ -62,21 +61,20 @@
       top: 10vh;
       height: 80vh;
       width: 100%;
-      animation: activeMenuAnimation .4s linear;
+      animation: activeMenuAnimation 0.4s linear;
       left: 0%;
       text-align: center;
       z-index: 10;
       @keyframes activeMenuAnimation {
-          0%{
-            left: -100%;
-          }
-          50%{
-            left: -50%;
-          }
-          100%{
-            left: 0%;
-          }
-          
+        0% {
+          left: -100%;
+        }
+        50% {
+          left: -50%;
+        }
+        100% {
+          left: 0%;
+        }
       }
     }
     .liElementDay,
@@ -103,7 +101,7 @@
       }
     }
   }
-  
+
   .menuUnactive {
     width: 30vw;
     margin-right: 5vw;
@@ -112,7 +110,7 @@
     grid-gap: 10px;
     text-align: center;
     transition: all 0.35 ease;
- 
+
     @media screen and (max-width: 1030px) {
       margin-right: 0vw;
       position: absolute;
@@ -120,24 +118,23 @@
       flex-direction: column;
       grid-gap: 0px;
       top: 10vh;
-    
+
       height: 80vh;
       width: 100%;
-      animation: unactiveMenuAnimation .4s 
-      linear;
+      animation: unactiveMenuAnimation 0.4s linear;
       left: -100%;
       z-index: 10;
-     
+
       @keyframes unactiveMenuAnimation {
-          0%{
-            left: 0%;
-          }
-          50%{
-            left: -50%;
-          }
-          100%{
-            left: -100%;
-          }
+        0% {
+          left: 0%;
+        }
+        50% {
+          left: -50%;
+        }
+        100% {
+          left: -100%;
+        }
       }
     }
     .liElementDay,
@@ -177,16 +174,16 @@
 }
 .logoContainerNight {
 }
-.hamburgerMenuDay{
+.hamburgerMenuDay {
   color: $sixthColor;
-  transition: all .35s ease-in-out;
+  transition: all 0.35s ease-in-out;
   &:hover {
     color: $thirdColor;
   }
 }
-.hamburgerMenuNight{
+.hamburgerMenuNight {
   color: $fifthColor;
-  transition: all .35s ease-in-out;
+  transition: all 0.35s ease-in-out;
   &:hover {
     color: $fourthColor;
   }
@@ -214,15 +211,14 @@
   }
 }
 .menuDayMode {
-    @media screen and (max-width: 1030px) {
-        background-image: $invertedPrimaryColor;
-    }
+  @media screen and (max-width: 1030px) {
+    background-image: $invertedPrimaryColor;
+  }
 }
 .menuNightMode {
-    @media screen and (max-width: 1030px) {
-        background-image: $invertedSecondaryColor;
-    }
-
+  @media screen and (max-width: 1030px) {
+    background-image: $invertedSecondaryColor;
+  }
 }
 .liLinkElement {
   color: $sixthColor;
@@ -252,4 +248,3 @@
     }
   }
 }
-

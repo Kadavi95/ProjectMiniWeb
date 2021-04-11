@@ -25,9 +25,9 @@ class Navigation extends Component {
   };
   turnOffMobileMenu = () => {
     this.setState({
-        mobile: false
-    })
-  }
+      mobile: false,
+    });
+  };
 
   closeMobileMenu = () => {
     const mobile = this.state.mobile;
@@ -53,74 +53,57 @@ class Navigation extends Component {
         }
       >
         <Link
-          to={item.link}
+          to={`/${item.link}`}
           onClick={this.closeMobileMenu}
-          className={this.state.nightMode === false ? item.itemClassName : item.itemClassNameNight}
+          className={
+            this.state.nightMode === false
+              ? item.itemClassName
+              : item.itemClassNameNight
+          }
         >
           {item.title}
         </Link>
       </li>
     ));
 
-    console.log(this.state.nightMode);
     return (
       <>
-
-          <nav className={this.state.nightMode === false ? 'navigationWidthContainer' : 'navigationWidthContainerNight'}>
-            <div onClick={this.changeNightMode} className="darkModeContainer">
-              <DarkMode
-                className={this.state.nightMode ? "darkModeOn" : "darkModeOff"}
-              />
-              {/* <Info
+        <nav className={"navigationWidthContainer"}>
+          <div
+            onClick={() => this.props.handleDarkMode()}
+            className="darkModeContainer"
+          >
+            <DarkMode isDarkMode={this.props.isDarkMode} />
+            {/* <Info
                 className={this.state.nightMode === false? "dzien" : "noc"}
               /> */}
-            
-            </div>
-            <div
-              className={
-                this.state.nightMode === false
-                  ? "logeContainerDay"
-                  : "logoContainerNight"
-              }
+          </div>
+          <div className={"logeContainerDay"}>
+            <Link
+              to="/"
+              exact="true"
+              onClick={this.turnOffMobileMenu}
+              className={"logoLinkDay"}
             >
-              <Link to="/" exact="true"  onClick={this.turnOffMobileMenu} className={
-                this.state.nightMode === false
-                  ? "logoLinkDay"
-                  : "LogoLinkNight"
-              }>
-                VET
-              </Link>
-            </div>
-            <div
-              className={
-                this.state.nightMode === false
-                  ? "hamburgerMenuDay"
-                  : "hamburgerMenuNight"
-              }
-              onClick={this.closeMobileMenu}
-            >
-              <i
-                className={this.state.mobile ? "fas fa-times" : "fas fa-bars"}
-              ></i>
-            </div>
-            <ul
-              className={`${
-                this.state.mobile ? "menuActive" : "menuUnactive"
-              } ${
-                this.state.nightMode === false ? "menuDayMode" : "menuNightMode"
-              }`}
-            >
-              {links}
-            </ul>
-            
-          </nav>
-         
-
+              VET
+            </Link>
+          </div>
+          <div className={"hamburgerMenuDay"} onClick={this.closeMobileMenu}>
+            <i
+              className={this.state.mobile ? "fas fa-times" : "fas fa-bars"}
+            ></i>
+          </div>
+          <ul
+            className={`${
+              this.state.mobile ? "menuActive" : "menuUnactive"
+            } ${"menuDayMode"}`}
+          >
+            {links}
+          </ul>
+        </nav>
       </>
     );
   }
 }
 
 export default Navigation;
-
-

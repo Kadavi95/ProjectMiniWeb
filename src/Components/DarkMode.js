@@ -1,9 +1,15 @@
 import React from "react";
-import '../sass/DarkMode.scss'
+import "../sass/DarkMode.scss";
 const DarkMode = (props) => {
   return (
-    <div className={`container ${props.className === "darkModeOff" ? 'darkContainer' : 'brightContainer'}`}>
-      <div className={`circle ${props.className === "darkModeOff" ? 'moveToLeft' : 'moveToRight' }`}></div>
+    <div
+      className={`container ${
+        props.isDarkMode ? "darkContainer" : "brightContainer"
+      }`}
+    >
+      <div
+        className={`circle ${props.isDarkMode ? "moveToLeft" : "moveToRight"}`}
+      ></div>
     </div>
   );
 };

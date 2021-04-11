@@ -1,5 +1,5 @@
 import React from "react";
-import '../../../sass/treatments.scss';
+import "../../../sass/treatments.scss";
 
 const procedures = [
   {
@@ -56,22 +56,21 @@ const Treatment = () => {
   ));
   return (
     <>
-      <div className={classNames[0]}>
-        <table className={classNames[1]}>
-          <thead className={classNames[2]}>
-            <tr className={classNames[4]}>
-              <th className={classNames[5]}>Zabieg</th>
-              <th className={classNames[5]}>Cena</th>
-            </tr>
-          </thead>
-          <tbody className={classNames[3]}>{singleItem}</tbody>
-        </table>
+      <div className="producstMainContainer">
+        <div className={classNames[0]}>
+          <table className={classNames[1]}>
+            <thead className={classNames[2]}>
+              <tr className={classNames[4]}>
+                <th className={classNames[5]}>Zabieg</th>
+                <th className={classNames[5]}>Cena</th>
+              </tr>
+            </thead>
+            <tbody className={classNames[3]}>{singleItem}</tbody>
+          </table>
+        </div>
       </div>
     </>
   );
 };
 
 export default Treatment;
-
-
-
