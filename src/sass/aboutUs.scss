@@ -1,161 +1,201 @@
-@import './variables';
+@import "./variables";
 
-.aboutUsContainer{
-    width: 100%;
-    height: 80vh;
+.aboutUsContainer {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-image: $invertedPrimaryColor;
+  .aboutUsSmallContainer {
+    width: 85%;
+    height: 75vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    background-image: $invertedPrimaryColor;
-    .aboutUsSmallContainer {
-        width: 85%;
-        height: 75vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        @media screen and (max-width: 376px) {
-            width: 90%;
-        }    
-        @media screen and (min-width: 377px) and (max-width: 412px){
-            width: 95%;
-        }
-        @media screen and (min-width: 413px) and (max-width: 420px){
-            width: 95%;
-        }
-        @media screen and (min-width: 515px) and (max-width: 559px){
-            width: 95%;
-        }
-        .aboutUsMainButtons{
-            width: 100%;
-            height: 10vh;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            align-items: center;
-       
-          
-            .aboutUsSingleMainButton{
-                height: 5vh;
-                width: 15vw;
-                background-color: 
-                $sixthColor;
-                color: $fifthColor;
-                border: none;
-                border-radius: 10px;
-                outline: none;
-                cursor: pointer;
-                @media screen and (max-width: 376px) {
-                    width: 25vw;
-                    font-size: .7rem;
-                } 
-                @media screen and (min-width: 377px) and (max-width: 412px){
-                    width: 25vw;
-                    font-size: .8rem;
-                }
-                @media screen and (min-width: 413px) and (max-width: 420px){
-                    width: 27vw;
-                    font-size: .85rem;
-                }
-                @media screen and (min-width: 515px) and (max-width: 559px){
-                    width: 27vw;
-                    font-size: .85rem;
-                }
-            }
-        }
-        .aboutUsDateContainer {
-            width: 100%; 
-            height: 50vh;
-            display: flex;
-            flex-direction: column;
-            align-content: space-between;
-            justify-content: space-between;
-            .ListRowMainCointainer{
-            display: flex;
-            flex-direction: row;
-            align-items: stretch;
-            justify-content: space-between;
-               .NameAndDestriptionContainer{
-                height: 15vh;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                max-width: 40%;
-                h5{
-                    font-size: 1.2rem;
-                    font-weight: bold;
-                    @media screen and (max-width: 376px) {
-                        font-size: 1rem;
-                    }
-                    @media screen and (min-width: 377px) and (max-width: 412px){
-                        font-size: 1.05rem;
-                    }
-                    @media screen and (min-width: 413px) and (max-width: 420px){
-                        font-size: 1.1rem;
-                    }
-                }
-                 p{
-                    font-size: 1rem;
-                    @media screen and (max-width: 376px) {
-                        font-size: .8rem;
-                    }
-                    @media screen and (min-width: 377px) and (max-width: 412px){
-                        font-size: .9rem;
-                    }
-                    @media screen and (min-width: 413px) and (max-width: 420px){
-                        font-size: 1rem;
-                    }
-
-                 }  
-               } 
-            }.ItemsContainer{
-                height: 15vh;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
-                align-items: center;
-                @media screen and (max-width: 1025px) {
-                    flex-direction: column;
-                    justify-content: space-around;
-                    align-items: flex-end;
-                }
-                .singleItem{
-                    display: block;
-                    margin-left: .3rem;
-                    @media screen and (max-width: 376px) {
-                        font-size: .8rem;
-                    }
-                    @media screen and (min-width: 377px) and (max-width: 412px){
-                        font-size: .9rem;
-                    }
-                    @media screen and (min-width: 413px) and (max-width: 420px){
-                        font-size: 1rem;
-                    }
-                }
-
-            }
-        }
-        .aboutUsChangePageButtons{
-            width: 100%;
-            height: 5vh;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            .aboutUsChanePageSingleButton{
-                height: 3vh;
-                margin-left: 1rem;
-                margin-right: 1rem;
-                background-color: $sixthColor;
-                color: $fifthColor;
-                border: none;
-                outline: none;
-                border-radius: 5px;
-                cursor: pointer;
-            }
-        }
-        
+    @media screen and (max-width: 376px) {
+      width: 90%;
     }
+    @media screen and (min-width: 377px) and (max-width: 412px) {
+      width: 95%;
+    }
+    @media screen and (min-width: 413px) and (max-width: 420px) {
+      width: 95%;
+    }
+    @media screen and (min-width: 515px) and (max-width: 559px) {
+      width: 95%;
+    }
+    .aboutUsMainButtons {
+      width: 100%;
+      height: 10vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      .aboutUsSingleMainButton {
+        height: 5vh;
+        width: 15vw;
+        background-color: $sixthColor;
+        color: $fifthColor;
+        border: none;
+        border-radius: 10px;
+        outline: none;
+        cursor: pointer;
+        transition: all 0.35s ease-in-out;
+        @media screen and (max-width: 376px) {
+          width: 25vw;
+          font-size: 0.7rem;
+        }
+        @media screen and (min-width: 377px) and (max-width: 412px) {
+          width: 25vw;
+          font-size: 0.8rem;
+        }
+        @media screen and (min-width: 413px) and (max-width: 420px) {
+          width: 27vw;
+          font-size: 0.85rem;
+        }
+        @media screen and (min-width: 515px) and (max-width: 559px) {
+          width: 27vw;
+          font-size: 0.85rem;
+        }
+      }
+    }
+    .aboutUsDateContainer {
+      width: 100%;
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+      align-content: space-between;
+      justify-content: space-between;
+      .ListRowMainCointainer {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-between;
+        .NameAndDestriptionContainer {
+          height: 15vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          max-width: 40%;
+          h5 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.35s ease-in-out;
+            @media screen and (max-width: 376px) {
+              font-size: 1rem;
+            }
+            @media screen and (min-width: 377px) and (max-width: 412px) {
+              font-size: 1.05rem;
+            }
+            @media screen and (min-width: 413px) and (max-width: 420px) {
+              font-size: 1.1rem;
+            }
+          }
+          p {
+            font-size: 1rem;
+            transition: all 0.35s ease-in-out;
+            @media screen and (max-width: 376px) {
+              font-size: 0.8rem;
+            }
+            @media screen and (min-width: 377px) and (max-width: 412px) {
+              font-size: 0.9rem;
+            }
+            @media screen and (min-width: 413px) and (max-width: 420px) {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+      .ItemsContainer {
+        height: 15vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        @media screen and (max-width: 1025px) {
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: flex-end;
+        }
+        .singleItem {
+          display: block;
+          margin-left: 0.3rem;
+          transition: all 0.35s ease-in-out;
+          @media screen and (max-width: 376px) {
+            font-size: 0.8rem;
+          }
+          @media screen and (min-width: 377px) and (max-width: 412px) {
+            font-size: 0.9rem;
+          }
+          @media screen and (min-width: 413px) and (max-width: 420px) {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+    .aboutUsChangePageButtons {
+      width: 100%;
+      height: 5vh;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      .aboutUsChanePageSingleButton {
+        height: 3vh;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        background-color: $sixthColor;
+        color: $fifthColor;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.35s ease-in-out;
+      }
+    }
+  }
 }
 
+.darkMode {
+  .aboutUsContainer {
+    background-image: $invertedSecondaryColor;
+    .aboutUsSmallContainer {
+      .aboutUsMainButtons {
+        .aboutUsSingleMainButton {
+          background-color: $fifthColor;
+          color: $sixthColor;
+        }
+      }
+      .aboutUsDateContainer {
+        .ListRowMainCointainer {
+          .NameAndDestriptionContainer {
+            h5 {
+              color: $fifthColor;
+              transition: all 0.35s ease-in-out;
+            }
+            p {
+              color: $fifthColor;
+              transition: all 0.35s ease-in-out;
+            }
+          }
+          .ItemsContainer {
+            .singleItem {
+              color: $fifthColor;
+              transition: all 0.35s ease-in-out;
+            }
+          }
+        }
+      }
+      .aboutUsChangePageButtons {
+        .aboutUsChanePageSingleButton {
+          color: $sixthColor;
+          background-color: $fifthColor;
+          transition: all 0.35s ease-in-out;
+        }
+      }
+    }
+  }
+}
