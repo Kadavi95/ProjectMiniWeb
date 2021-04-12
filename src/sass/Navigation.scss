@@ -39,8 +39,10 @@
       transition: all 0.35s ease-in-out;
     }
     .fa-times {
+      color: $sixthColor;
     }
     .fa-bars {
+      color: $sixthColor;
     }
   }
   .menuActive {
@@ -234,6 +236,15 @@
       .logeContainerDay{
         .logoLinkDay{
           color: $fifthColor;
+        }
+      }
+      .hamburgerMenuDay{
+        .fa-bars{
+          color: $fifthColor;
+        }
+        .fa-times{
+          color: $fifthColor;
+
         }
       }
       .menuDayMode{
