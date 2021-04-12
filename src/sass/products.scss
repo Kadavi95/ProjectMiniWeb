@@ -1,7 +1,12 @@
-@import './variables';
+@import "./variables";
 
 .producstMainContainer {
-    width: 100%;
-    height: 80vh;
-    background-image: $invertedPrimaryColor;
+  width: 100%;
+  height: 80vh;
+  background-image: $invertedPrimaryColor;
+}
+.darkMode {
+  .producstMainContainer {
+    background-image: $invertedSecondaryColor;
+  }
 }

@@ -190,6 +190,20 @@
         color: $seventhColor;
         background: $sixthColor;
         outline: none;
+        transition: all .35s ease-in-out;
+    }
+  }
+}
+.darkMode {
+  #contactUsForm{
+    background-image: $invertedSecondaryColor;
+    #contactUsButtonContainer{
+      #contactUsMainButton{
+        color: $sixthColor;
+        background: $seventhColor;
+        transition: all .35s ease-in-out;
+      }
+
     }
   }
 }

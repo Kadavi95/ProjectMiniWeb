@@ -21,6 +21,8 @@
                 font-weight: bold;
                 text-align: center;
                 font-size: 1.3rem;
+                color:$sixthColor;
+                transition: all .35s ease-in-out;
             }
             .singleVaccinePElement{
                 max-height: 15vh;
@@ -29,7 +31,26 @@
                 font-size: 1rem;
                 line-height: 1.5rem;
                 overflow: scroll;
+                color: $sixthColor;
+                transition: all .35s ease-in-out;
     
+
+            }
+        }
+    }
+}
+.darkMode {
+    .vaccinateContainer{
+        .singleVaccineUlElement{
+            .singleVaccineLiElement{
+                .singleVaccineHElement{
+                    color: $fifthColor;
+                    transition: all .35s ease-in-out;
+                }
+                .singleVaccinePElement{
+                    color: $fifthColor;
+                    transition: all .35s ease-in-out;
+                }
 
             }
         }

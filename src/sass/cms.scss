@@ -100,3 +100,9 @@
   background-color: $seventhColor;
   color: $sixthColor;
 }
+
+.darkMode {
+  .cms_container {
+    background-image: $invertedSecondaryColor;
+  }
+}

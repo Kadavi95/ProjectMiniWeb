@@ -1,43 +1,67 @@
-@import './variables';
+@import "./variables";
 
 .treatmentContainer {
-    height: 70vh;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    .treatmentTable{
-        border: 1px solid black;
-        height: 50vh;
-        width: 50%;
-     .treatmentTableThead{
-         border-bottom: 1px solid black;
-         background-color: yellow;
-        .treatmentTableTr{
-            height: 5vh;
-            width: 100%;
-            line-height: 5vh;
-
-            .treatmentTableTh{
-                width: 50%;
-                border-right: 1px solid black;
-            }
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  .treatmentTable {
+    border: 1px solid $sixthColor;
+    height: 50vh;
+    width: 50%;
+    .treatmentTableThead {
+      border-bottom: 1px solid $sixthColor;
+      background-color: $fourthColor;
+      .treatmentTableTr {
+        height: 5vh;
+        width: 100%;
+        line-height: 5vh;
+        .treatmentTableTh {
+          width: 50%;
+          border-right: 1px solid $sixthColor;
+          color: $sixthColor;
         }
-     }   
-     .treatmentTableTbody{
-    
-            .treatmentTableTr{
-                height: 5vh;
-                width: 100%;
-                line-height: 5vh;
-                border-bottom: 1px solid black;
-
-                .treatmentTableTd{
-                    width: 50%;
-                    text-align: center;
-                }    
-            }
-     }
+      }
     }
+    .treatmentTableTbody {
+      .treatmentTableTr {
+        height: 5vh;
+        width: 100%;
+        line-height: 5vh;
+        border-bottom: 1px solid $sixthColor;
+        color: $sixthColor;
+
+        .treatmentTableTd {
+          width: 50%;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+.darkMode {
+  .treatmentContainer {
+    .treatmentTable {
+        border: 1px solid $fifthColor;
+      .treatmentTableThead {
+        border-bottom: 1px solid $fifthColor;
+        background-color: $fourthColor;
+        .treatmentTableTr {
+          .treatmentTableTh {
+            border-right: 1px solid $fifthColor;
+            color: $sixthColor;
+          }
+        }
+      }
+      .treatmentTableTbody {
+        .treatmentTableTr {
+            border-bottom: 1px solid $fifthColor;
+            color: $fifthColor;
+     
+        }
+      }
+    }
+  }
 }

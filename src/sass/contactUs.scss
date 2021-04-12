@@ -22,9 +22,22 @@
         height: 6vh;
         width: 100%;
         line-height: 6vh;
+        color: $sixthColor;
+        transition: all .35s ease-in-out;
         .firstDate{
             text-decoration: underline;
         }
+    }
+  }
+}
+.darkMode{
+  .contactus_container{
+    background-image: $invertedSecondaryColor;
+    .mainContainer{
+      .singleDateContainer{
+        color: $fifthColor;
+        transition: all .35s ease-in-out;
+      }
     }
   }
 }
