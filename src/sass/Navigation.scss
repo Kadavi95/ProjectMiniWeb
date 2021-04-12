@@ -1,5 +1,4 @@
 @import "./variables";
-
 .navigationWidthContainer {
   width: 100vw;
   height: 10vh;
@@ -14,12 +13,12 @@
     width: 30vw;
     margin-left: 5vw;
   }
-  .logeContainerDay{
+  .logeContainerDay {
     line-height: 10vh;
     height: 10vh;
     width: 30vw;
     text-align: center;
-    .logoLinkDay{
+    .logoLinkDay {
       display: block;
       height: 10vh;
       cursor: pointer;
@@ -78,8 +77,7 @@
         }
       }
     }
-    .liElementDay,
-    .LiElementNight {
+    .liElementDay {
       display: flex;
       height: 10vh;
       line-height: 10vh;
@@ -187,7 +185,6 @@
   transition: all 0.35s ease-in;
   &:hover {
     color: $thirdColor;
-    // border-bottom: 2px solid $thirdColor;
   }
   @media screen and (max-width: 1020px) {
     &:hover {
@@ -211,30 +208,31 @@
   }
 }
 .darkMode {
-    .navigationWidthContainer {
-      background-image: $secondaryColor;
-      .logeContainerDay{
-        .logoLinkDay{
+  .navigationWidthContainer {
+    background-image: $secondaryColor;
+    .logeContainerDay {
+      .logoLinkDay {
+        color: $fifthColor;
+      }
+    }
+    .hamburgerMenuDay {
+      .fa-bars {
+        color: $fifthColor;
+      }
+      .fa-times {
+        color: $fifthColor;
+      }
+    }
+    .menuDayMode {
+      background-image: $invertedSecondaryColor;
+      @media  screen and (min-width: 1030px) {
+        background-image: none;
+      }
+      .liElementDay {
+        .liLinkElement {
           color: $fifthColor;
         }
       }
-      .hamburgerMenuDay{
-        .fa-bars{
-          color: $fifthColor;
-        }
-        .fa-times{
-          color: $fifthColor;
-
-        }
-      }
-      .menuDayMode{
-        background-image: $invertedSecondaryColor;
-        .liElementDay{
-          .liLinkElement{
-            color: $fifthColor;
-          }
-        }
-      }
+    }
   }
-  
 }
