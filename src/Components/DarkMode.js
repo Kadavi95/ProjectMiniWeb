@@ -8,7 +8,7 @@ const DarkMode = (props) => {
       }`}
     >
       <div
-        className={`circle ${props.isDarkMode ? "moveToLeft" : "moveToRight"}`}
+        className={`circle ${props.isDarkMode ? "moveToRight" : "moveToLeft"}`}
       ></div>
     </div>
   );

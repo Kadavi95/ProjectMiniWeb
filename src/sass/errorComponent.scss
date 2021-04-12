@@ -12,3 +12,13 @@
         font-size: 4rem;
     }
 }
+
+.darkMode{
+    .ErrorContainer{
+        background-image: $invertedSecondaryColor;
+        h1{
+            color: $fifthColor;
+        }
+
+    }
+}

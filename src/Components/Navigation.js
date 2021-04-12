@@ -7,7 +7,7 @@ import "../sass/Navigation.scss";
 class Navigation extends Component {
   state = {
     mobile: false,
-    nightMode: false,
+    // nightMode: false,
     links: [],
   };
 
@@ -36,12 +36,12 @@ class Navigation extends Component {
     });
   };
 
-  changeNightMode = () => {
-    const nightMode = this.state.nightMode;
-    this.setState({
-      nightMode: !nightMode,
-    });
-  };
+  // changeNightMode = () => {
+  //   const nightMode = this.state.nightMode;
+  //   this.setState({
+  //     nightMode: !nightMode,
+  //   });
+  // };
   render() {
     const links = this.state.links.map((item) => (
       <li

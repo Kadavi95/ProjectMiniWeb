@@ -20,17 +20,17 @@
   .moveToRight {
     animation: moveRight 0.5s linear;
     left: 8.5vw;
-    background-color: $seventhColor;
+    background-color: $sixthColor;
   }
   .moveToLeft {
     animation: moveLeft 0.5s linear;
     left: -0.5vw;
-    background-color: $sixthColor;
+    background-color: $seventhColor;
   }
   @keyframes moveRight {
     0% {
       left: 0vw;
-      background-color: $sixthColor;
+      background-color: $seventhColor;
     }
     50% {
       left: 4vw;
@@ -38,13 +38,13 @@
     }
     100% {
       left: 8vw;
-      background-color: $seventhColor;
+      background-color: $sixthColor;
     }
   }
   @keyframes moveLeft {
     0% {
       left: 8vw;
-      background-color: $seventhColor;
+      background-color: $sixthColor;
     }
     50% {
       left: 4vw;
@@ -52,7 +52,7 @@
     }
     100% {
       left: 0vw;
-      background-color: $sixthColor;
+      background-color: $seventhColor;
     }
   }
 }
@@ -71,10 +71,5 @@
   .navigationWidthContainer {
     background-image: none;
     background-color: red !important;
-  }
-
-  .footer_container {
-    background-image: none;
-    background-color: blue;
   }
 }

@@ -37,3 +37,16 @@
         }
     }
 }
+.darkMode {
+    .footer_container {
+        background-image: $secondaryColor;
+    }
+    .vet_conteiner {
+        color: $fifthColor;
+    }
+    .icons_container{
+        #abc{
+            color: $fifthColor;
+        }
+    }
+}

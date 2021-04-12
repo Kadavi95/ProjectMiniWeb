@@ -31,7 +31,6 @@ const App = () => {
   // if(istrue){
   //   'true'
   // }
-
   return (
     <>
       <div className={isDarkMode && "darkMode"}>
