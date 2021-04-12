@@ -34,14 +34,26 @@
       border-radius: 10px;
       text-transform: uppercase;
       outline: none;
-      font-size: 0.6rem;
+      font-size: 1rem;
       cursor: pointer;
-
+      background-color: $sixthColor;
+      transition: all .35s ease-in-out;
+      @media  screen and (max-width: 415px) {
+          font-size: .75rem;
+      }
+      @media  screen and (max-width: 376px) {
+          font-size: .7rem;
+      }
+      @media  screen and (max-width: 321px) {
+          font-size: .6rem;
+      }
       .buttonLink {
         display: block;
         text-decoration: none;
-        color: $sixthColor;
+        color: $fifthColor;
         width: 100%;
+        height: 2vh;
+
       }
     }
   }
@@ -49,5 +61,17 @@
 .darkMode {
   .homeMainContainer{
     background-image: $invertedSecondaryColor;
+    .homePageContainer{
+
+    }
+    .contactUsContainer{
+      .contactButtonLink{
+        background-color: $fifthColor;
+        .buttonLink{
+          color: $sixthColor;
+        }
+      }
+    }
   }
+
 }

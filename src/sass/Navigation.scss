@@ -183,14 +183,17 @@
 .liLinkElement {
   color: $sixthColor;
   transition: all 0.35s ease-in;
-  &:hover {
-    color: $thirdColor;
-  }
+
   @media screen and (max-width: 1030px) {
     &:hover {
-      color: $thirdColor;
       border-bottom: none;
     }
+  }
+  @media  screen and (min-width: 1030px) {
+    &:hover {
+      color: $thirdColor;
+    }
+    
   }
 }
 
