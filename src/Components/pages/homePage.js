@@ -43,7 +43,7 @@ const HomePage = () => {
         </div>
         <div className="contactUsContainer">
           <button className="contactButtonLink">
-            <Link className="buttonLink" to="appointment">
+            <Link className="buttonLink" to="/appointment">
               Umów wizytę
             </Link>
           </button>
