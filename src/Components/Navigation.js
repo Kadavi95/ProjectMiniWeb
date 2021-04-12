@@ -46,20 +46,12 @@ class Navigation extends Component {
     const links = this.state.links.map((item) => (
       <li
         key={item.id}
-        className={
-          this.state.nightMode === false
-            ? item.firstClassName
-            : item.secondClassName
-        }
+        className={item.firstClassName}
       >
         <Link
           to={`/${item.link}`}
           onClick={this.closeMobileMenu}
-          className={
-            this.state.nightMode === false
-              ? item.itemClassName
-              : item.itemClassNameNight
-          }
+          className={item.itemClassName}
         >
           {item.title}
         </Link>
