@@ -3,52 +3,53 @@ const fakeData = [
     type: "Nasz działalnośc",
     organizations: [
       {
-        name: "Fundacja 'Dbam o zdrowie' ",
-        description: "Cel i misja: pomoc osobom znajdującym się w trudnej sytuacji życiowej",
+        name: "Lorem, ipsum dolor.",
+        description: "Cel i misja: Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, corrupti?",
         items: ["ubrania", "jedznie", "sprzęt AGD"],
       },
       {
-        name: "Fundacja 'Dla dzieci'",
-        description: "Cel i misja: pomoc dzieciom z ubogich rodzin.",
+        name: "Lorem, ipsum dolor.'",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         items: ["ubrania", "meble", "zabawki"],
       },
       {
-        name: "Fundacja 'Bez domu'",
-        description: "Cel i misja: pomoc dla osób nie posiadających miejsca zamieszkania",
+        name: "Lorem ipsum dolor sit amet.",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, corrupti?Lorem ipsum ...",
         items: ["ubrania", "jedzenie", "ciepłe koce"],
       },
       {
-        name: "Fundacja 'Domny pies'",
-        description: "Cel i misja: pomoc materialna dla schronisk",
+        name: "Lorem ipsum dolor sit amet.",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aperiam perferendis harum, praesentium et quis.",
         items: ["karma", "artykuły weteryjaryjne", "klatki"],
       },
       {
-        name: "Fundacja 'Niecodzienna Starość'",
-        description: "Cel i misja: pomoc w organizacji zajęć dla starszych ludzi",
+        name: "Lorem ipsum dolor sit amet.",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aperiam perferendis harum, praesentium et quis.",
         items: ["materiały edukacyjne", "meble", "artykuły medyczne"],
       },
       {
-        name: "Fundacja 'Wyjątkowe macierzyństwo",
-        description: "Cel i misja: pomoc materialna dla samotnych matek ",
+        name: "Lorem ipsum dolor sit amet.",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aperiam perferendis harum, praesentium et quis.",
         items: ["maslo", "mleko", "bulki"],
       },
       {
-        name: "Fundacja 'Nigdy więcej'",
-        description: "Cel i misja: pomoc i orgnizacja zajęć resocjalizacyjnych dla młodocianych przestępców ",
+        name: "Lorem ipsum dolor sit amet consectetur.",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aperiam perferendis harum, praesentium et quis.",
         items: ["maslo", "mleko", "bulki"],
       },
       {
-        name: "Fundacja 'Pomocy Kombatabtom'",
+        name: "Lorem ipsum dolor sit amet consectetur.",
         description: "Cel i misja: pomoc materialna dla kombatantów",
         items: ["maslo", "mleko", "bulki"],
       },
       {
-        name: "Fundacja 9",
+        name: "Lorem ipsum dolor sit amet consectetur.",
         description: "Lorem ipsum dolorem lorem",
         items: ["artykuły medyczne", "artykułyspożywcze", "ubrania"],
       },
     ],
   },
+ 
   {
     type: "Współpracujemy z",
     organizations: [
@@ -90,17 +91,17 @@ const fakeData = [
     organizations: [
       {
         name: "'Zbiórka 'Lorem Ipsum 1'",
-        description: "But I must explain to you how all this mistaken idea",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aperiam perferendis harum, praesentium et quis.",
         items: ["Volkswagen", "Audi", "Opel"],
       },
       {
         name: "'Zbiórka 'Lorem Ipsum 2'",
-        description: "But I must explain to you how all this mistaken idea",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aperiam perferendis harum, praesentium et quis.",
         items: ["Volkswagen", "Audi", "Opel"],
       },
       {
         name: "'Zbiórka 'Lorem Ipsum 3'",
-        description: "But I must explain to you how all this mistaken idea",
+        description:  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aperiam perferendis harum, praesentium et quis.",
         items: ["Volkswagen", "Audi", "Opel"],
       },
 
@@ -110,3 +111,5 @@ const fakeData = [
 ];
 
 export default fakeData;
+
+

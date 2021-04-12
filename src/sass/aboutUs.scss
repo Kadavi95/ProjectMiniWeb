@@ -46,19 +46,19 @@
         transition: all 0.35s ease-in-out;
         @media screen and (max-width: 376px) {
           width: 25vw;
-          font-size: 0.7rem;
+          font-size: 0.5rem;
         }
         @media screen and (min-width: 377px) and (max-width: 412px) {
           width: 25vw;
-          font-size: 0.8rem;
+          font-size: 0.6rem;
         }
         @media screen and (min-width: 413px) and (max-width: 420px) {
           width: 27vw;
-          font-size: 0.85rem;
+          font-size: 0.65rem;
         }
         @media screen and (min-width: 515px) and (max-width: 559px) {
           width: 27vw;
-          font-size: 0.85rem;
+          font-size: 0.7rem;
         }
       }
     }
