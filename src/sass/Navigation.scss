@@ -25,7 +25,7 @@
       cursor: pointer;
       text-decoration: none;
       font-size: 2rem;
-      color: $fifthColor;
+      color: $sixthColor;
     }
   }
   .hamburgerMenuDay {
@@ -174,22 +174,7 @@
   color: $sixthColor;
   transition: all 0.35s ease-in;
   &:hover {
-    color: $thirdColor;
-    // border-bottom: 2px solid $thirdColor;
-    @media screen and (min-width: 1030px) {
-      border-bottom: 2px solid $thirdColor;
-    }
-  }
-}
-.LogoLinkNight {
-  color: $fifthColor;
-  transition: all 0.35s ease-in;
-  &:hover {
-    color: $fourthColor;
-    // border-bottom: 2px solid $fourthColor;
-    @media screen and (min-width: 1030px) {
-      border-bottom: 2px solid $fourthColor;
-    }
+    color: $thirdColor !important;
   }
 }
 .menuDayMode {
@@ -197,17 +182,12 @@
     background-image: $invertedPrimaryColor;
   }
 }
-.menuNightMode {
-  @media screen and (max-width: 1030px) {
-    background-image: $invertedSecondaryColor;
-  }
-}
 .liLinkElement {
   color: $sixthColor;
   transition: all 0.35s ease-in;
   &:hover {
     color: $thirdColor;
-    border-bottom: 2px solid $thirdColor;
+    // border-bottom: 2px solid $thirdColor;
   }
   @media screen and (max-width: 1020px) {
     &:hover {
