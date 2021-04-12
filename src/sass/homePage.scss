@@ -1,11 +1,11 @@
 @import "./variables";
 
 .homeMainContainer {
-    width: 100%;
-    height: 80vh;
-    position: relative;
-    background-image: $invertedPrimaryColor;
-  
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  background-image: $invertedPrimaryColor;
+
   .homePageContainer {
     height: 75vh;
     width: 80%;
@@ -44,5 +44,10 @@
         width: 100%;
       }
     }
+  }
+}
+.darkMode {
+  .homeMainContainer{
+    background-image: $invertedSecondaryColor;
   }
 }

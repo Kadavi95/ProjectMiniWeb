@@ -88,8 +88,7 @@
         line-height: 20vh;
         justify-content: center;
       }
-      .liLinkElement,
-      .liLinkElementNight {
+      .liLinkElement {
         height: 10vh;
         text-decoration: none;
         @media screen and (max-width: 1030px) {
@@ -136,8 +135,7 @@
         }
       }
     }
-    .liElementDay,
-    .LiElementNight {
+    .liElementDay {
       display: flex;
       height: 10vh;
       line-height: 10vh;
@@ -148,8 +146,7 @@
         line-height: 20vh;
         justify-content: center;
       }
-      .liLinkElement,
-      .liLinkElementNight {
+      .liLinkElement {
         height: 10vh;
         text-decoration: none;
         @media screen and (max-width: 1030px) {
@@ -171,9 +168,12 @@
 .logoLinkDay {
   color: $sixthColor;
   transition: all 0.35s ease-in;
-  &:hover {
-    color: $thirdColor !important;
+  @media  screen and (min-width: 1030px) {
+    &:hover {
+      color: $thirdColor !important;
+    }
   }
+ 
 }
 .menuDayMode {
   @media screen and (max-width: 1030px) {
@@ -186,33 +186,25 @@
   &:hover {
     color: $thirdColor;
   }
-  @media screen and (max-width: 1020px) {
+  @media screen and (max-width: 1030px) {
     &:hover {
       color: $thirdColor;
       border-bottom: none;
     }
   }
 }
-.liLinkElementNight {
-  color: $fifthColor;
-  transition: all 0.35s ease-in;
-  &:hover {
-    color: $fourthColor;
-    border-bottom: 2px solid $fourthColor;
-  }
-  @media screen and (max-width: 1020px) {
-    &:hover {
-      color: $fourthColor;
-      border-bottom: none;
-    }
-  }
-}
+
 .darkMode {
   .navigationWidthContainer {
     background-image: $secondaryColor;
     .logeContainerDay {
       .logoLinkDay {
         color: $fifthColor;
+        @media screen and (min-width: 1030px) {
+          &:hover {
+            color: $fourthColor !important;
+          }
+        }
       }
     }
     .hamburgerMenuDay {
@@ -231,6 +223,12 @@
       .liElementDay {
         .liLinkElement {
           color: $fifthColor;
+          @media  screen and (min-width: 1030px) {
+            &:hover {
+              color: $fourthColor;
+            }
+          }
+        
         }
       }
     }
