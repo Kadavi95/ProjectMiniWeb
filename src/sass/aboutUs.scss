@@ -46,19 +46,23 @@
         transition: all 0.35s ease-in-out;
         @media screen and (max-width: 376px) {
           width: 25vw;
-          font-size: 0.5rem;
+          font-size: 0.4rem;
         }
         @media screen and (min-width: 377px) and (max-width: 412px) {
           width: 25vw;
-          font-size: 0.6rem;
+          font-size: 0.5rem;
         }
-        @media screen and (min-width: 413px) and (max-width: 420px) {
+        @media screen and (min-width: 413px) and (max-width: 514px) {
           width: 27vw;
-          font-size: 0.65rem;
+          font-size: 0.55rem;
         }
         @media screen and (min-width: 515px) and (max-width: 559px) {
           width: 27vw;
-          font-size: 0.7rem;
+          font-size: 0.55rem;
+        }
+        @media screen and (min-width: 560px) and (max-width: 730px) {
+          width: 27vw;
+          font-size: 0.6rem;
         }
       }
     }

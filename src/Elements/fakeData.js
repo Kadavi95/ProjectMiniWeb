@@ -4,7 +4,7 @@ const fakeData = [
     organizations: [
       {
         name: "Lorem, ipsum dolor.",
-        description: "Cel i misja: Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, corrupti?",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, corrupti?",
         items: ["ubrania", "jedznie", "sprzęt AGD"],
       },
       {
@@ -14,32 +14,32 @@ const fakeData = [
       },
       {
         name: "Lorem ipsum dolor sit amet.",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, corrupti?Lorem ipsum ...",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, corrupti",
         items: ["ubrania", "jedzenie", "ciepłe koce"],
       },
       {
         name: "Lorem ipsum dolor sit amet.",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aperiam perferendis harum, praesentium et quis.",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate ",
         items: ["karma", "artykuły weteryjaryjne", "klatki"],
       },
       {
         name: "Lorem ipsum dolor sit amet.",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aperiam perferendis harum, praesentium et quis.",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate ",
         items: ["materiały edukacyjne", "meble", "artykuły medyczne"],
       },
       {
         name: "Lorem ipsum dolor sit amet.",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aperiam perferendis harum, praesentium et quis.",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
         items: ["maslo", "mleko", "bulki"],
       },
       {
         name: "Lorem ipsum dolor sit amet consectetur.",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aperiam perferendis harum, praesentium et quis.",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vol",
         items: ["maslo", "mleko", "bulki"],
       },
       {
         name: "Lorem ipsum dolor sit amet consectetur.",
-        description: "Cel i misja: pomoc materialna dla kombatantów",
+        description: "lorem xyz",
         items: ["maslo", "mleko", "bulki"],
       },
       {
@@ -90,18 +90,18 @@ const fakeData = [
     type: "Dlaczego my",
     organizations: [
       {
-        name: "'Zbiórka 'Lorem Ipsum 1'",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aperiam perferendis harum, praesentium et quis.",
+        name: "'Zbiór 1",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate...",
         items: ["Volkswagen", "Audi", "Opel"],
       },
       {
-        name: "'Zbiórka 'Lorem Ipsum 2'",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aperiam perferendis harum, praesentium et quis.",
+        name: "'Zbiór 2",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate...",
         items: ["Volkswagen", "Audi", "Opel"],
       },
       {
-        name: "'Zbiórka 'Lorem Ipsum 3'",
-        description:  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aperiam perferendis harum, praesentium et quis.",
+        name: "'Zbiór 3",
+        description:  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate...",
         items: ["Volkswagen", "Audi", "Opel"],
       },
 
